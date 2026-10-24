@@ -1,0 +1,53 @@
+/* Polytheseus shared frame: fonts, top bar and footer used on every page of polytheseus.com.
+   Pack pages keep their own look inside this frame; everything here is namespaced pt-. */
+@font-face { font-family: "Figtree"; src: url("/assets/fonts/figtree.woff2") format("woff2"); font-weight: 300 900; font-display: swap; }
+@font-face { font-family: "Nunito"; src: url("/assets/fonts/nunito.woff2") format("woff2"); font-weight: 200 1000; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("/assets/fonts/inter.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+
+:root { --pt-ink: #141414; --pt-orange: #df6d3e; --pt-orange-soft: #f3a37f; --pt-cream: #f6efe6; --pt-dim: #a8a29a; }
+
+.pt-bar { background: var(--pt-ink); color: #fff; font: 600 15px/1 "Figtree", system-ui, sans-serif; position: relative; z-index: 5; }
+.pt-bar-in { max-width: 1120px; margin: 0 auto; padding: 0 16px; height: 56px; display: flex; align-items: center; gap: 16px; }
+.pt-brand { display: flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; letter-spacing: .14em; font-weight: 800; font-size: 14px; }
+.pt-brand img { width: 30px; height: 30px; display: block; }
+.pt-nav { margin-left: auto; display: flex; gap: 4px; align-items: center; }
+.pt-nav a { color: #e9e4dc; text-decoration: none; padding: 8px 10px; border-radius: 8px; }
+.pt-nav a:hover, .pt-nav a:focus-visible { background: #262626; color: #fff; }
+.pt-nav a.pt-cta { background: var(--pt-orange); color: var(--pt-ink); font-weight: 800; margin-left: 4px; }
+.pt-nav a.pt-cta:hover { background: var(--pt-orange-soft); }
+@media (max-width: 640px) {
+  .pt-brand span { display: none; }
+  .pt-nav a.pt-hide-sm { display: none; }
+}
+
+.pt-foot { background: var(--pt-ink); color: var(--pt-dim); font: 400 15px/1.6 "Figtree", system-ui, sans-serif; margin-top: 64px; }
+.pt-foot-in { max-width: 1120px; margin: 0 auto; padding: 48px 16px 40px; display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 32px; }
+.pt-foot a { color: #e9e4dc; text-decoration: none; }
+.pt-foot a:hover { color: var(--pt-orange-soft); text-decoration: underline; }
+.pt-foot h4 { color: #fff; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; margin: 0 0 10px; }
+.pt-foot ul { list-style: none; margin: 0; padding: 0; }
+.pt-foot li { margin: 4px 0; }
+.pt-foot .pt-brand { margin-bottom: 12px; }
+.pt-foot p { margin: 0 0 8px; max-width: 34ch; }
+.pt-foot-base { border-top: 1px solid #2a2a2a; max-width: 1120px; margin: 0 auto; padding: 16px; font-size: 13px; }
+@media (max-width: 760px) { .pt-foot-in { grid-template-columns: 1fr 1fr; } .pt-foot-in > div:first-child { grid-column: 1 / -1; } }
+
+/* "Set it up" section on pack pages (ops/setup-section.py). Inherits the page's font and colours;
+   --pt-accent is set per pack on the section. */
+.pt-setup { --pt-accent: var(--pt-orange); }
+.pt-get { background: #fff; border: 1px solid rgba(0,0,0,.1); border-left: 6px solid var(--pt-accent); border-radius: 16px; padding: 16px 20px; margin: 0 0 24px; }
+.pt-get p { margin: 6px 0; }
+.pt-btn { display: inline-block; border: 2px solid var(--pt-accent); background: var(--pt-accent); color: var(--pt-accent-fg, #fff); font: inherit; font-weight: 700; padding: 10px 20px; border-radius: 999px; cursor: pointer; text-decoration: none; margin: 4px 8px 4px 0; }
+.pt-btn.ghost { background: transparent; color: inherit; }
+.pt-btn:hover { filter: brightness(1.08); }
+.pt-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 16px; }
+.pt-tabs button { font: inherit; font-weight: 700; font-size: 16px; padding: 8px 16px; border-radius: 999px; border: 2px solid rgba(0,0,0,.15); background: #fff; color: #1d1d1b; cursor: pointer; }
+.pt-tabs button[aria-selected="true"] { background: #1d1d1b; border-color: #1d1d1b; color: #fff; }
+.pt-panel { margin-bottom: 20px; }
+.pt-howto.with-video { display: grid; grid-template-columns: 260px 1fr; gap: 28px; align-items: start; }
+.pt-howto video { width: 100%; aspect-ratio: 9 / 16; border-radius: 16px; background: #1b1f3d; box-shadow: 0 4px 18px rgba(0,0,0,.14); }
+.pt-steps li { margin-bottom: 10px; }
+.pt-small { font-size: .85em; opacity: .8; }
+.pt-note { background: rgba(0,0,0,.035); border-radius: 12px; padding: 12px 16px; font-size: .92em; }
+.pt-setup pre { white-space: pre-wrap; }
+@media (max-width: 700px) { .pt-howto.with-video { grid-template-columns: 1fr; } .pt-howto video { max-width: 300px; justify-self: center; } }
