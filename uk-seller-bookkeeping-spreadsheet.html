@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bookkeeping spreadsheet for Vinted, eBay, Etsy and Depop sellers (UK, 2025/26 and 2026/27)</title>
+<meta name="description" content="A ready-made Excel and Google Sheets record keeper for UK side-hustle sellers. Platform fees worked out for you, monthly and tax-year totals, and the £1,000 trading allowance check. £12.99, one-off.">
+<link rel="canonical" href="https://polytheseus.com/uk-seller-bookkeeping-spreadsheet">
+<meta property="og:type" content="product">
+<meta property="og:site_name" content="Polytheseus">
+<meta property="og:title" content="The bookkeeping spreadsheet for Vinted, eBay, Etsy and Depop sellers">
+<meta property="og:description" content="Log each sale once. Fees, monthly totals and Self Assessment-ready figures fill in by themselves.">
+<meta property="og:url" content="https://polytheseus.com/uk-seller-bookkeeping-spreadsheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.sheet { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; background: #fff; margin: 18px 0 8px; }
+.sheet table { border-collapse: collapse; width: 100%; font-size: 15px; min-width: 720px; }
+.sheet th { background: #1f4e78; color: #fff; text-align: left; padding: 8px 10px; font-weight: 700; }
+.sheet td { padding: 7px 10px; border-top: 1px solid #e4e4e4; white-space: nowrap; }
+.sheet td.n, .sheet th.n { text-align: right; font-variant-numeric: tabular-nums; }
+.sheet td.auto { background: #eef5ff; }
+.sheet tr.tot td { font-weight: 700; background: #f7f7f7; }
+.cap { color: var(--muted); font-size: 15px; margin: 0 0 24px; }
+.buy { background: var(--cream); border: 1px solid var(--line); border-radius: 16px; padding: 24px; margin: 28px 0; }
+.buy .price { font-size: 34px; font-weight: 800; color: var(--ink); margin: 0; }
+.tabs-list li { margin-bottom: 8px; }
+.note { border-left: 4px solid var(--orange); padding: 4px 0 4px 16px; margin: 20px 0; }
+main.wrap { max-width: 860px; }
+header.wrap { max-width: 860px; padding-top: 40px; }
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Product","name":"UK Seller Bookkeeping Spreadsheet","description":"Excel and Google Sheets bookkeeping spreadsheet for UK sellers on Vinted, eBay, Etsy, Depop and Facebook Marketplace: automatic platform fees, monthly and tax-year totals, and a £1,000 trading allowance check.","brand":{"@type":"Brand","name":"Polytheseus"},"url":"https://polytheseus.com/uk-seller-bookkeeping-spreadsheet","offers":{"@type":"Offer","price":"12.99","priceCurrency":"GBP","availability":"https://schema.org/InStock","url":"https://buy.polar.sh/polar_cl_g41fOfhxzIiJIH2FBiysw9SwUg6rQ1taC13c42Y5QnU"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Does it work in Google Sheets?","acceptedAnswer":{"@type":"Answer","text":"Yes. Upload the .xlsx to Google Drive and open it with Google Sheets (File > Import also works). It also opens in Excel, LibreOffice Calc and Apple Numbers."}},
+{"@type":"Question","name":"Which tax year is it for?","acceptedAnswer":{"@type":"Answer","text":"You pick: 2025/26 (6 April 2025 to 5 April 2026, whose online return is due 31 January 2027) or 2026/27. The totals only count sales dated in the year you choose, and the sheet tells you how many rows fall outside it."}},
+{"@type":"Question","name":"Is this tax advice?","acceptedAnswer":{"@type":"Answer","text":"No. It's a record-keeping template that adds up your figures. It doesn't decide whether you're trading or what you owe. Check gov.uk or a qualified accountant for your own situation."}},
+{"@type":"Question","name":"Do I need this if I only sell my own old clothes?","acceptedAnswer":{"@type":"Answer","text":"Probably not. HMRC says selling your own unwanted things is usually not trading, so there's normally no tax on it. The sheet is for people who buy to resell or make things to sell."}}
+]}
+</script>
+<!-- pt:head -->
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/brand.css">
+<meta property="og:image" content="https://polytheseus.com/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /pt:head -->
+</head>
+<body>
+<!-- pt:bar -->
+<nav class="pt-bar" aria-label="Polytheseus">
+  <div class="pt-bar-in">
+    <a class="pt-brand" href="/"><img src="/assets/favicon.svg" alt="" width="30" height="30"><span>POLYTHESEUS</span></a>
+    <div class="pt-nav">
+      <a href="/#packs">Packs</a>
+      <a class="pt-hide-sm" href="/#how">How it works</a>
+      <a href="/#about">About</a>
+      <a class="pt-cta" href="/#packs">Start free</a>
+    </div>
+  </div>
+</nav>
+<!-- /pt:bar -->
+
+<header class="wrap">
+  <p class="eyebrow">For UK side-hustle sellers · Excel and Google Sheets</p>
+  <h1>The bookkeeping spreadsheet for Vinted, eBay, Etsy and Depop sellers</h1>
+  <p class="lede">Log each sale once: date, platform, price, postage. The platform fee, your monthly totals and your Self Assessment figures fill in by themselves.</p>
+  <p><a class="btn" href="https://buy.polar.sh/polar_cl_g41fOfhxzIiJIH2FBiysw9SwUg6rQ1taC13c42Y5QnU">Get the spreadsheet: £12.99</a> <a class="btn ghost" href="https://sellertaxcalculator.co.uk/">Free tax calculator first</a></p>
+  <p class="fine">One-off payment · Instant download · 14-day refunds · Also $16 / €15</p>
+</header>
+
+<main class="wrap">
+
+<h2>What it looks like</h2>
+<p>These are the three example rows that come in the sheet. You type the white columns; the blue ones work themselves out.</p>
+<div class="sheet"><table>
+<tr><th>Date</th><th>Platform</th><th>Item</th><th class="n">Sale</th><th class="n">Postage</th><th class="n">Platform fee</th><th class="n">Other costs</th><th class="n">Net</th></tr>
+<tr><td>01/06/2025</td><td>Etsy</td><td>Handmade candle</td><td class="n">25.00</td><td class="n">3.50</td><td class="n auto">4.18</td><td class="n">2.00</td><td class="n auto">22.32</td></tr>
+<tr><td>03/06/2025</td><td>Vinted</td><td>Used jumper</td><td class="n">12.00</td><td class="n">3.00</td><td class="n auto">0.00</td><td class="n">0.00</td><td class="n auto">15.00</td></tr>
+<tr><td>10/06/2025</td><td>eBay business</td><td>Phone case</td><td class="n">15.00</td><td class="n">2.99</td><td class="n auto">3.12</td><td class="n">1.00</td><td class="n auto">13.87</td></tr>
+</table></div>
+<p class="cap">The Etsy fee is 6.5% transaction + 4% + 20p processing + the listing fee + the 0.48% regulatory fee, plus 20% VAT on Etsy's fees, rounded to £4.18. Every fee shows its source and the date it was last checked.</p>
+
+<p>And the Year summary tab for those rows:</p>
+<div class="sheet"><table style="min-width:0">
+<tr><th>Year summary: 2025/26</th><th class="n">£</th></tr>
+<tr><td>Total income (sales + postage charged)</td><td class="n">61.49</td></tr>
+<tr><td>Total platform fees</td><td class="n">7.30</td></tr>
+<tr><td>Other allowable expenses</td><td class="n">3.00</td></tr>
+<tr><td>Net profit</td><td class="n">51.19</td></tr>
+<tr class="tot"><td colspan="2">£1,000 trading allowance check: "Likely full relief: your total gross income is £1,000 or less this tax year…"</td></tr>
+</table></div>
+
+<div class="buy">
+  <p class="price">£12.99</p>
+  <p>The spreadsheet (.xlsx), a matching CSV template and a short how-to. One business licence, yours to keep. Updates for 2026/27 are free.</p>
+  <p><a class="btn" href="https://buy.polar.sh/polar_cl_g41fOfhxzIiJIH2FBiysw9SwUg6rQ1taC13c42Y5QnU">Buy and download</a></p>
+  <p class="small">Secure checkout by Polar, our merchant of record. Your receipt email has the download link.</p>
+</div>
+
+<h2>What's inside</h2>
+<ul class="tabs-list">
+  <li><b>Transactions:</b> 500 ready rows with dropdowns for platform and category. Fees are calculated for Etsy, eBay business and Depop; Vinted and eBay private selling are £0 to the seller.</li>
+  <li><b>Monthly summary:</b> income, fees, costs and net for each month. Pick the tax year in one cell: 2025/26 or 2026/27.</li>
+  <li><b>Year summary:</b> the totals your Self Assessment asks for, the £1,000 trading allowance check in plain English, and a warning if any rows are dated outside the year.</li>
+  <li><b>Fee reference:</b> each platform's fee model, its source and the date it was last checked. Any check older than 90 days is flagged, so you know to confirm it.</li>
+  <li><b>Read me first:</b> five steps, and what the sheet does and doesn't do.</li>
+</ul>
+
+<h2>Why keep records now</h2>
+<p>Since 2024, platforms like Vinted, eBay and Etsy send HMRC details of sellers who sell 30 or more items, or earn about £1,700 (€2,000) or more, in a year (<a href="https://www.gov.uk/government/news/information-for-online-sellers">gov.uk</a>). Being reported doesn't mean you owe tax: <a href="https://www.gov.uk/government/news/no-tax-changes-for-online-sellers">the rules haven't changed</a>. But if you're trading and your sales are over £1,000 a year, you need to register for Self Assessment (<a href="https://www.gov.uk/guidance/tax-free-allowances-on-property-and-trading-income">trading allowance</a>). Then you'll want your income and costs in one place before the 31 January deadline.</p>
+<div class="note">
+  <p><b>Only selling your own old things?</b> HMRC says that's usually not trading, so normally there's no tax to pay (<a href="https://taxhelpforhustles.campaign.gov.uk/buying-or-making-things-to-sell-and-online-selling-tax-rules/">Help for Hustles</a>). You probably don't need this sheet. It's for people who buy to resell or make things to sell.</p>
+</div>
+
+<h2>Honest notes</h2>
+<ul>
+  <li>It's a <b>record-keeping template, not tax advice</b>. It adds up your figures; it doesn't decide whether you're trading or what you owe. For that, check gov.uk or a qualified accountant.</li>
+  <li>Tax figures were checked against gov.uk in July 2026. Platform fees are a snapshot, and each shows its last-checked date.</li>
+  <li>eBay business fees use the general-category rate (11.9%), and Etsy fees leave out Offsite Ads. The free <a href="https://sellertaxcalculator.co.uk/">calculator</a> handles both exactly.</li>
+  <li>Months run 1 April to 31 March. HMRC accepts accounts made up to 31 March without splitting off the days to 5 April (<a href="https://www.gov.uk/government/publications/how-to-calculate-your-taxable-profits-hs222-self-assessment-helpsheet/hs222-how-to-calculate-your-taxable-profits-2026">HS222</a>).</li>
+  <li>Built with AI (Claude) and tested automatically: the workbook is recalculated and checked against 23 tests, including the fee examples above worked by hand.</li>
+</ul>
+
+<section class="faq">
+<h2>Questions</h2>
+<h3>Does it work in Google Sheets?</h3>
+<p>Yes. Upload the .xlsx to Google Drive and open it with Google Sheets (File → Import also works). It also opens in Excel, LibreOffice Calc and Apple Numbers.</p>
+<h3>Which tax year is it for?</h3>
+<p>You pick: 2025/26 (6 April 2025 to 5 April 2026, whose online return is due 31 January 2027) or 2026/27. The totals only count sales dated in the year you choose.</p>
+<h3>I sell on a platform that isn't listed.</h3>
+<p>Choose "Other" and type the platform's fee into the Other costs column. Totals still work.</p>
+<h3>Do you see my figures?</h3>
+<p>No. It's a file on your computer or in your own Google Drive. Nothing is sent to us.</p>
+<h3>What if it's not for me?</h3>
+<p>Reply to your receipt within 14 days and you'll get a refund (<a href="/terms">terms</a>).</p>
+<h3>I'm a bookkeeper with side-hustle clients.</h3>
+<p>Our free <a href="/bookkeeper-skills/">bookkeeper pack</a> helps you chase records and explain tax bills to clients. The licence for this sheet covers one business, so each client should buy their own.</p>
+</section>
+
+</main>
+<!-- pt:foot -->
+<footer class="pt-foot">
+  <div class="pt-foot-in">
+    <div>
+      <a class="pt-brand" href="/"><img src="/assets/favicon.svg" alt="" width="30" height="30"><span>POLYTHESEUS</span></a>
+      <p>Know-how packs that make ChatGPT, Gemini and Claude work like an experienced pro in your job. Free to start.</p>
+      <p><a href="mailto:support@polytheseus.com">support@polytheseus.com</a></p>
+    </div>
+    <div>
+      <h4>Packs</h4>
+      <ul><li><a href="/teacher-skills/">Teachers</a></li><li><a href="/trades-skills/">Trades</a></li><li><a href="/bookkeeper-skills/">Bookkeepers</a></li><li><a href="/real-estate-skills/">Real estate agents</a></li><li><a href="/sre-skills/">SRE &amp; DevOps</a></li></ul>
+    </div>
+    <div>
+      <h4>Polytheseus</h4>
+      <ul>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/privacy">Privacy</a></li>
+        <li><a href="/terms">Terms</a></li>
+        <li><a href="https://github.com/polytheseus">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="pt-foot-base">Polytheseus is run by Robin Hale. The packs and this site are written and tested by Claude, an AI agent. <a href="/#about">How that works</a>.</div>
+</footer>
+<!-- /pt:foot -->
+</body>
+</html>
