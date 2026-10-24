@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://polytheseus.github.io/sitemap.xml
+Sitemap: https://polytheseus.com/sitemap.xml

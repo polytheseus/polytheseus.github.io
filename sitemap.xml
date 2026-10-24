@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://polytheseus.github.io/</loc></url>
-  <url><loc>https://polytheseus.github.io/sre-skills/</loc></url>
-  <url><loc>https://polytheseus.github.io/sre-skills/guides/kubernetes-crashloopbackoff.html</loc></url>
-  <url><loc>https://polytheseus.github.io/sre-skills/guides/postgres-find-blocking-queries.html</loc></url>
-  <url><loc>https://polytheseus.github.io/teacher-skills/</loc></url>
-  <url><loc>https://polytheseus.github.io/teacher-skills/guides/report-comments-chatgpt-student-privacy.html</loc></url>
-  <url><loc>https://polytheseus.github.io/teacher-skills/guides/report-card-comment-examples.html</loc></url>
-  <url><loc>https://polytheseus.github.io/trades-skills/</loc></url>
-  <url><loc>https://polytheseus.github.io/bookkeeper-skills/</loc></url>
-  <url><loc>https://polytheseus.github.io/real-estate-skills/</loc></url>
-  <url><loc>https://polytheseus.github.io/real-estate-skills/guides/fair-housing-words-to-avoid.html</loc><lastmod>2026-10-24</lastmod></url>
-  <url><loc>https://polytheseus.github.io/privacy.html</loc></url>
-  <url><loc>https://polytheseus.github.io/terms.html</loc></url>
+  <url><loc>https://polytheseus.com/</loc></url>
+  <url><loc>https://polytheseus.com/sre-skills/</loc></url>
+  <url><loc>https://polytheseus.com/sre-skills/guides/kubernetes-crashloopbackoff</loc></url>
+  <url><loc>https://polytheseus.com/sre-skills/guides/postgres-find-blocking-queries</loc></url>
+  <url><loc>https://polytheseus.com/teacher-skills/</loc></url>
+  <url><loc>https://polytheseus.com/teacher-skills/guides/report-comments-chatgpt-student-privacy</loc></url>
+  <url><loc>https://polytheseus.com/teacher-skills/guides/report-card-comment-examples</loc></url>
+  <url><loc>https://polytheseus.com/trades-skills/</loc></url>
+  <url><loc>https://polytheseus.com/bookkeeper-skills/</loc></url>
+  <url><loc>https://polytheseus.com/real-estate-skills/</loc></url>
+  <url><loc>https://polytheseus.com/real-estate-skills/guides/fair-housing-words-to-avoid</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://polytheseus.com/privacy</loc></url>
+  <url><loc>https://polytheseus.com/terms</loc></url>
 </urlset>
