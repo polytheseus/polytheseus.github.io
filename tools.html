@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free tools for teachers, bookkeepers, agents and online sellers (no sign-up, runs in your browser)</title>
+<meta name="description" content="Free in-browser tools: a rubric checker for teachers, a records chase planner, MTD start-date checker, query-list and year-end questionnaire builders for bookkeepers, a fair housing listing checker, and UK seller tax and payments on account calculators. Nothing you type is sent anywhere.">
+<link rel="canonical" href="https://polytheseus.com/tools">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Polytheseus">
+<meta property="og:title" content="Free tools that do one paperwork job well">
+<meta property="og:description" content="Checkers, planners, builders and calculators for teachers, bookkeepers, agents and online sellers. No sign-up, and nothing you type leaves your browser.">
+<meta property="og:url" content="https://polytheseus.com/tools">
+<link rel="stylesheet" href="style.css">
+<style>
+.tools { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin: 20px 0 8px; }
+.tool { display: block; text-decoration: none; color: var(--text); background: #fff; border: 1px solid var(--line); border-left: 6px solid var(--c, var(--orange)); border-radius: 14px; padding: 18px 20px; transition: transform .15s, box-shadow .15s; }
+.tool:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(60, 40, 20, .10); }
+.tool h3 { font-size: 20px; margin: 0 0 6px; color: var(--ink); }
+.tool p { margin: 0 0 8px; font-size: 16px; }
+.tool .meta { margin: 0; font-size: 14px; color: var(--muted); }
+.tool.teacher { --c: #d9502f; } .tool.books { --c: #1f7a52; } .tool.estate { --c: #1f4d45; } .tool.seller { --c: #0e7490; }
+.promise { background: var(--cream); border: 1px solid var(--line); border-radius: 14px; padding: 14px 18px; margin: 24px 0; font-size: 16px; }
+main.wrap h2 { font-size: 26px; margin: 48px 0 4px; }
+main.wrap, header.wrap { max-width: 960px; }
+@media (max-width: 700px) { .tools { grid-template-columns: 1fr; } }
+</style>
+<!-- pt:head -->
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/brand.css">
+<meta property="og:image" content="https://polytheseus.com/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /pt:head -->
+</head>
+<body>
+<!-- pt:bar -->
+<nav class="pt-bar" aria-label="Polytheseus">
+  <div class="pt-bar-in">
+    <a class="pt-brand" href="/"><img src="/assets/favicon.svg" alt="" width="30" height="30"><span>POLYTHESEUS</span></a>
+    <div class="pt-nav">
+      <a href="/#packs">Packs</a>
+      <a href="/tools">Free tools</a>
+      <a class="pt-hide-sm" href="/#how">How it works</a>
+      <a class="pt-hide-sm" href="/#about">About</a>
+      <a class="pt-cta" href="/#packs">Start free</a>
+    </div>
+  </div>
+</nav>
+<!-- /pt:bar -->
+
+<header class="wrap">
+  <p class="eyebrow">Free · No sign-up · Runs in your browser</p>
+  <h1>Free tools that do one paperwork job well</h1>
+  <p class="lede">Checkers, planners, builders and calculators for teachers, bookkeepers, estate agents and online sellers. Each one sits on a guide that explains the rules behind it.</p>
+</header>
+
+<main class="wrap">
+
+<p class="promise"><b>Your data stays with you.</b> These tools run as JavaScript in your own browser. Nothing you paste or type is sent to us or stored, so you can use real class lists, bank lines and listings. The tax calculators give estimates for education, not tax advice.</p>
+
+<h2 id="teachers">For teachers</h2>
+<div class="tools">
+  <a class="tool teacher" href="/teacher-skills/guides/how-to-make-a-rubric-with-chatgpt#checker">
+    <h3>Rubric checker</h3>
+    <p>Paste a rubric from ChatGPT, Google Docs, Sheets or Word. It flags judgement words like "good" with nothing to see, levels that differ only by "some" and "most", rows that mark neatness or effort instead of learning, and too many or too few levels.</p>
+    <p class="meta">Guide: how to make a rubric with ChatGPT</p>
+  </a>
+</div>
+
+<h2 id="bookkeepers">For bookkeepers</h2>
+<div class="tools">
+  <a class="tool books" href="/bookkeeper-skills/guides/client-wont-send-records#planner">
+    <h3>Records chase planner</h3>
+    <p>Pick the deadline and your prep time and get a date for each chaser, moved off weekends and the Christmas and New Year bank holidays, as calendar reminders.</p>
+    <p class="meta">UK and US · Guide: client won't send their records</p>
+  </a>
+  <a class="tool books" href="/bookkeeper-skills/guides/making-tax-digital-income-tax#checker">
+    <h3>Making Tax Digital start-date checker</h3>
+    <p>Enter a client's self-employment and property income for each year and see when MTD for Income Tax starts for them and their next deadline.</p>
+    <p class="meta">UK · Guide: Making Tax Digital for Income Tax</p>
+  </a>
+  <a class="tool books" href="/bookkeeper-skills/guides/uncategorised-transactions-client-queries#builder">
+    <h3>Client query-list builder</h3>
+    <p>Paste uncategorised bank lines from Xero, QuickBooks, FreeAgent, Sage or a CSV and get a numbered client message, a WhatsApp version and notes for the accountant.</p>
+    <p class="meta">UK and US · Guide: uncategorised transactions</p>
+  </a>
+  <a class="tool books" href="/bookkeeper-skills/guides/year-end-client-questionnaire#builder">
+    <h3>Year-end questionnaire builder</h3>
+    <p>Tick what applies to the client and get a tailored questionnaire, a document checklist and a cover email, ready to copy or download.</p>
+    <p class="meta">UK Self Assessment and US 1040 · Guide: year-end client questionnaire</p>
+  </a>
+</div>
+
+<h2 id="agents">For real estate agents</h2>
+<div class="tools">
+  <a class="tool estate" href="/real-estate-skills/guides/fair-housing-words-to-avoid#checker">
+    <h3>Fair housing listing checker</h3>
+    <p>Paste a listing and it highlights phrases that HUD's advertising guidance warns about, with the reason and a suggested fix for each. A second pair of eyes, not a legal sign-off.</p>
+    <p class="meta">US · Guide: fair housing words to avoid</p>
+  </a>
+</div>
+
+<h2 id="sellers">For online sellers (UK)</h2>
+<p class="small">These calculators are on our sister site, sellertaxcalculator.co.uk.</p>
+<div class="tools">
+  <a class="tool seller" href="https://sellertaxcalculator.co.uk/">
+    <h3>Seller fee and side-hustle tax calculator</h3>
+    <p>Work out your Vinted, eBay, Etsy, Depop or Facebook Marketplace fees, whether the £1,000 trading allowance covers you, and roughly what tax you'd owe.</p>
+    <p class="meta">2025/26 and 2026/27 rates</p>
+  </a>
+  <a class="tool seller" href="https://sellertaxcalculator.co.uk/payments-on-account">
+    <h3>Payments on account calculator</h3>
+    <p>See why the first January bill can be one and a half times your tax, and what you'll pay on 31 January and 31 July.</p>
+    <p class="meta">UK Self Assessment</p>
+  </a>
+  <a class="tool seller" href="https://sellertaxcalculator.co.uk/cant-pay-self-assessment-bill">
+    <h3>Pay late or spread it? calculator</h3>
+    <p>Compare the interest and penalties of paying a Self Assessment bill late with an HMRC payment plan (Time to Pay).</p>
+    <p class="meta">UK Self Assessment</p>
+  </a>
+  <a class="tool seller" href="https://sellertaxcalculator.co.uk/hmrc-letter-online-selling">
+    <h3>Which tax years need putting right?</h3>
+    <p>Had a letter from HMRC about your sales? Enter your trading income for each year and whether it's already on a return, and see which years may need putting right.</p>
+    <p class="meta">UK · Guide: HMRC letter about online selling</p>
+  </a>
+</div>
+
+<h2>Want this done for you every time?</h2>
+<p>The tools handle one step. The free packs teach ChatGPT, Gemini or Claude the whole job: report comments, records chasers, listings, buyer replies. Five-minute setup, no coding.</p>
+<p><a class="btn" href="/#packs">See the free packs</a></p>
+
+</main>
+<!-- pt:foot -->
+<footer class="pt-foot">
+  <div class="pt-foot-in">
+    <div>
+      <a class="pt-brand" href="/"><img src="/assets/favicon.svg" alt="" width="30" height="30"><span>POLYTHESEUS</span></a>
+      <p>Know-how packs that make ChatGPT, Gemini and Claude work like an experienced pro in your job. Free to start.</p>
+      <p><a href="mailto:support@polytheseus.com">support@polytheseus.com</a></p>
+    </div>
+    <div>
+      <h4>Packs</h4>
+      <ul><li><a href="/teacher-skills/">Teachers</a></li><li><a href="/trades-skills/">Trades</a></li><li><a href="/bookkeeper-skills/">Bookkeepers</a></li><li><a href="/real-estate-skills/">Real estate agents</a></li><li><a href="/seller-skills/">Online sellers</a></li><li><a href="/sre-skills/">SRE &amp; DevOps</a></li></ul>
+    </div>
+    <div>
+      <h4>Polytheseus</h4>
+      <ul>
+        <li><a href="/tools">Free tools</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/privacy">Privacy</a></li>
+        <li><a href="/terms">Terms</a></li>
+        <li><a href="https://github.com/polytheseus">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="pt-foot-base">Polytheseus is run by Robin Hale. The packs and this site are written and tested by Claude, an AI agent. <a href="/#about">How that works</a>.</div>
+</footer>
+<!-- /pt:foot -->
+</body>
+</html>
