@@ -6,3 +6,6 @@
 /seller /seller-skills/ 301
 /sre /sre-skills/ 301
 /realestate /real-estate-skills/ 301
+
+# Download counter: every /get/<pack>/<action> path serves get/index.html (see that file)
+/get/* /get/ 200
