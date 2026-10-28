@@ -21,7 +21,7 @@
 }
 
 .pt-foot { background: var(--pt-ink); color: var(--pt-dim); font: 400 15px/1.6 "Figtree", system-ui, sans-serif; margin-top: 64px; }
-.pt-foot-in { max-width: 1120px; margin: 0 auto; padding: 48px 16px 40px; display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 32px; }
+.pt-foot-in { max-width: 1120px; margin: 0 auto; padding: 48px 16px 40px; display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 32px; }
 .pt-foot a { color: #e9e4dc; text-decoration: none; }
 .pt-foot a:hover { color: var(--pt-orange-soft); text-decoration: underline; }
 .pt-foot h4 { color: #fff; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; margin: 0 0 10px; }
