@@ -10,6 +10,7 @@
 # Short URLs for single tools and products ("Tool in 20 seconds" Shorts, end cards)
 /invoice /trades-skills/guides/invoice-template-for-trades#maker 301
 /bank /teacher-skills/comment-bank 301
+/report-cards /teacher-skills/report-cards 301
 
 # Download counter: every /get/<pack>/<action> path serves get/index.html (see that file)
 /get/* /get/ 200
