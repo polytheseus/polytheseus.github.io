@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Making Tax Digital for landlords: the £30,000 test for April 2027 (free calculator)</title>
+<meta name="description" content="Do you need MTD for Income Tax as a landlord? Add up gross rent (your share) and any self-employment turnover for 2025/26: over £30,000 means MTD from 6 April 2027. Free calculator, worked examples, deadlines and the records you'll need.">
+<link rel="canonical" href="https://polytheseus.com/mtd-for-landlords">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Polytheseus">
+<meta property="og:title" content="MTD for landlords: are you over £30,000?">
+<meta property="og:description" content="Gross rent, your share, plus any self-employment. A free calculator that shows whether you're in from April 2027, and what to do next.">
+<meta property="og:url" content="https://polytheseus.com/mtd-for-landlords">
+<link rel="stylesheet" href="style.css">
+<style>
+main.wrap { max-width: 860px; }
+header.wrap { max-width: 860px; padding-top: 40px; }
+h2 { font-size: 30px; margin: 56px 0 8px; }
+.answer { background: var(--cream); border: 1px solid var(--line); border-left: 5px solid var(--orange); border-radius: 12px; padding: 16px 20px; margin: 24px 0; }
+.answer p { margin: .35em 0; }
+table.t, table.lm-t { width: 100%; border-collapse: collapse; background: #fff; font-size: 16px; margin: 12px 0 20px; }
+table.t th, table.t td, table.lm-t th, table.lm-t td { border: 1px solid var(--line); padding: 7px 10px; text-align: left; vertical-align: top; }
+table.t th, table.lm-t th { background: var(--cream); }
+.n { text-align: right !important; font-variant-numeric: tabular-nums; white-space: nowrap; }
+tr.tot td { font-weight: 700; background: #faf6f0; }
+.tool { background: #fff; border: 2px solid var(--orange); border-radius: 16px; padding: 20px 22px; margin: 22px 0; }
+.tool fieldset { border: 0; padding: 0; margin: 14px 0 6px; }
+.tool legend { font-weight: 800; color: var(--ink); margin-bottom: 4px; }
+.tool label { display: block; font-weight: 600; margin: 8px 0 2px; font-size: 16px; }
+.tool label span { font-weight: 400; color: var(--muted); font-size: 14px; }
+.tool input, .tool select { font: inherit; font-size: 16px; padding: 7px 9px; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+.tool input[type=checkbox] { width: auto; margin-right: 6px; }
+.prow { display: grid; grid-template-columns: 1.4fr 1fr .9fr .7fr .7fr; gap: 8px; align-items: end; margin: 6px 0; }
+.prow input, .prow select { width: 100%; }
+.prow .h { font-size: 13px; color: var(--muted); font-weight: 600; }
+.prow label { margin: 0; font-weight: 400; }
+.prow .c { display: none; font-size: 13px; color: var(--muted); font-weight: 600; }
+.scroll { overflow-x: auto; }
+table.t th { white-space: normal; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.two input { width: 100%; }
+.check label { font-weight: 400; }
+.tool button { font: inherit; font-weight: 800; border: 0; border-radius: 999px; padding: 11px 22px; cursor: pointer; background: var(--orange); color: var(--ink); margin: 14px 8px 0 0; }
+.tool button.ghost { background: transparent; border: 2px solid var(--ink); padding: 9px 20px; }
+#lm-out { margin-top: 14px; }
+.lm-yes, .lm-no, .lm-err { border-radius: 10px; padding: 10px 14px; }
+.lm-yes { background: #fde8dc; }
+.lm-no { background: #e5f3ea; }
+.lm-err { background: #fbe3e3; }
+.lm-note { border-left: 4px solid var(--orange); padding: 2px 0 2px 12px; }
+.lm-small, .small { color: var(--muted); font-size: 15px; }
+.lm-tl li { margin-bottom: 4px; }
+pre.prompt { white-space: pre-wrap; background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; font: 15px/1.55 ui-monospace, Menlo, Consolas, monospace; }
+.cta { background: var(--cream); border: 1px solid var(--line); border-radius: 16px; padding: 22px 24px; margin: 36px 0; }
+[hidden] { display: none !important; }
+@media (max-width: 640px) {
+  .prow { grid-template-columns: 1fr 1fr; }
+  .prow .h { display: none; }
+  .prow .c { display: block; }
+  .prow:not(:first-of-type) .nm { margin-top: 10px; }
+  .prow .nm { grid-column: 1 / -1; }
+  .two { grid-template-columns: 1fr; }
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Article","headline":"Making Tax Digital for landlords: the £30,000 test for April 2027","datePublished":"2026-10-29","dateModified":"2026-10-29","author":{"@type":"Organization","name":"Polytheseus","url":"https://polytheseus.com/"}},
+{"@type":"FAQPage","mainEntity":[
+ {"@type":"Question","name":"Do landlords need Making Tax Digital from April 2027?","acceptedAnswer":{"@type":"Answer","text":"Yes, if your qualifying income for the 2025 to 2026 tax year is more than £30,000. Qualifying income is your gross rent (your share, before expenses) plus any self-employment turnover, taken from the 2025 to 2026 tax return due on 31 January 2027. Wages, pensions and dividends don't count."}},
+ {"@type":"Question","name":"Is the MTD threshold based on rent or profit?","acceptedAnswer":{"@type":"Answer","text":"Rent. HMRC uses income before expenses, so a landlord with £32,000 of rent and £14,000 of costs is still over £30,000. If a letting agent pays you after taking its fee, use the full rent the tenant paid."}},
+ {"@type":"Question","name":"How does MTD work for jointly owned property?","acceptedAnswer":{"@type":"Answer","text":"Only your share counts. If you and your partner each get half of £50,000 of rent, each of you has £25,000 of qualifying income. If you only learn your share after expenses have been taken off, HMRC uses that figure."}},
+ {"@type":"Question","name":"Does rent-a-room income count for Making Tax Digital?","acceptedAnswer":{"@type":"Answer","text":"Qualifying income comes from your tax return. Lodger income under the £7,500 Rent a Room limit (£3,750 if shared) is tax-free and usually isn't on the return, so it doesn't count. If it's over the limit, or you declared it, it counts."}},
+ {"@type":"Question","name":"What are the MTD quarterly update deadlines for landlords starting in April 2027?","acceptedAnswer":{"@type":"Answer","text":"7 August 2027, 7 November 2027, 7 February 2028 and 7 May 2028, then the 2027 to 2028 tax return through your software by 31 January 2029. Each update covers the tax year so far. From 2027 to 2028, each late update earns a penalty point and 4 points means a £200 penalty."}},
+ {"@type":"Question","name":"What if my rental income is £20,000 or less?","acceptedAnswer":{"@type":"Answer","text":"HMRC says qualifying income of £20,000 or less is automatically exempt from Making Tax Digital for Income Tax. You still send a Self Assessment return as normal. Between £20,000 and £30,000, the 2026 to 2027 year decides whether you start in April 2028."}}
+]}
+]}
+</script>
+<!-- pt:head -->
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/brand.css">
+<meta property="og:image" content="https://polytheseus.com/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /pt:head -->
+</head>
+<body>
+<!-- pt:bar -->
+<nav class="pt-bar" aria-label="Polytheseus">
+  <div class="pt-bar-in">
+    <a class="pt-brand" href="/"><img src="/assets/favicon.svg" alt="" width="30" height="30"><span>POLYTHESEUS</span></a>
+    <div class="pt-nav">
+      <a href="/#packs">Packs</a>
+      <a href="/tools">Free tools</a>
+      <a class="pt-hide-sm" href="/#how">How it works</a>
+      <a class="pt-hide-sm" href="/#about">About</a>
+      <a class="pt-cta" href="/#packs">Start free</a>
+    </div>
+  </div>
+</nav>
+<!-- /pt:bar -->
+
+<header class="wrap">
+  <p class="eyebrow">For UK landlords · Checked against gov.uk on 29 October 2026</p>
+  <h1>Making Tax Digital for landlords: are you over £30,000?</h1>
+  <p class="lede">From 6 April 2027, landlords with more than £30,000 of rent and self-employment income have to keep digital records and send HMRC an update every three months. The number that decides it is in the tax return you're about to file. Here's how to work it out, with a free calculator.</p>
+</header>
+
+<main class="wrap">
+
+<div class="answer">
+  <p><strong>The short answer.</strong> Add up the rent you received from 6 April 2025 to 5 April 2026 (your share, <em>before</em> any expenses or agent fees) and any self-employment turnover. If the total is <strong>more than £30,000</strong>, you need Making Tax Digital for Income Tax from <strong>6 April 2027</strong>. If it's £20,000 or less, you're exempt. In between, next year's figure decides April 2028.</p>
+  <p>HMRC checks the 2025 to 2026 return you file by 31 January 2027 and writes to you. If no letter comes, it's still your job to sign up (<a href="https://www.gov.uk/guidance/find-out-if-and-when-you-need-to-use-making-tax-digital-for-income-tax">gov.uk</a>).</p>
+</div>
+
+<h2>The thresholds</h2>
+<table class="t">
+<tr><th>Tax year HMRC checks</th><th>Return due</th><th class="n">In if over</th><th>You start</th></tr>
+<tr><td>2024 to 2025</td><td>31 January 2026</td><td class="n">£50,000</td><td>6 April 2026 (already started)</td></tr>
+<tr><td><strong>2025 to 2026</strong></td><td><strong>31 January 2027</strong></td><td class="n"><strong>£30,000</strong></td><td><strong>6 April 2027</strong></td></tr>
+<tr><td>2026 to 2027</td><td>31 January 2028</td><td class="n">£20,000</td><td>6 April 2028</td></tr>
+</table>
+<p class="small">"Over" means more than: exactly £30,000 isn't in. Source: <a href="https://www.gov.uk/guidance/find-out-if-and-when-you-need-to-use-making-tax-digital-for-income-tax">Find out if and when you need to use MTD for Income Tax</a> (HMRC). Qualifying income of £20,000 or less is a permanent automatic exemption unless your income rises (<a href="https://www.gov.uk/guidance/find-out-if-you-can-get-an-exemption-from-making-tax-digital-for-income-tax">exemptions</a>).</p>
+
+<h2 id="calculator">Free calculator: your qualifying income</h2>
+<p>Type what you know. It stays in your browser: nothing is sent or saved.</p>
+<form class="tool" id="lm-form" autocomplete="off">
+  <label for="lm-year">Tax year</label>
+  <select id="lm-year">
+    <option value="2025-26" selected>2025 to 2026 (decides April 2027)</option>
+    <option value="2026-27">2026 to 2027 (decides April 2028)</option>
+    <option value="2024-25">2024 to 2025 (decided April 2026)</option>
+  </select>
+
+  <fieldset>
+    <legend>Rent from properties you let in the UK</legend>
+    <div class="prow"><span class="h nm">Property (optional)</span><span class="h">Rent</span><span class="h">Per</span><span class="h">Months let</span><span class="h">Your share %</span></div>
+    <div class="prow"><label class="nm"><span class="c">Property 1 (optional)</span><input id="lm-p1-name" aria-label="Property 1 name" placeholder="e.g. Flat, Leeds"></label><label><span class="c">Rent</span><input id="lm-p1-rent" inputmode="decimal" aria-label="Property 1 rent" placeholder="e.g. 950"></label><label><span class="c">Per</span><select id="lm-p1-per" aria-label="Property 1 rent period"><option value="month">month</option><option value="week">week</option><option value="year">year</option></select></label><label><span class="c">Months let</span><input id="lm-p1-months" inputmode="numeric" aria-label="Property 1 months let" placeholder="12"></label><label><span class="c">Your share %</span><input id="lm-p1-share" inputmode="numeric" aria-label="Property 1 your share" placeholder="100"></label></div>
+    <div class="prow"><label class="nm"><span class="c">Property 2 (optional)</span><input id="lm-p2-name" aria-label="Property 2 name"></label><label><span class="c">Rent</span><input id="lm-p2-rent" inputmode="decimal" aria-label="Property 2 rent"></label><label><span class="c">Per</span><select id="lm-p2-per" aria-label="Property 2 rent period"><option value="month">month</option><option value="week">week</option><option value="year">year</option></select></label><label><span class="c">Months let</span><input id="lm-p2-months" inputmode="numeric" aria-label="Property 2 months let" placeholder="12"></label><label><span class="c">Your share %</span><input id="lm-p2-share" inputmode="numeric" aria-label="Property 2 your share" placeholder="100"></label></div>
+    <div class="prow"><label class="nm"><span class="c">Property 3 (optional)</span><input id="lm-p3-name" aria-label="Property 3 name"></label><label><span class="c">Rent</span><input id="lm-p3-rent" inputmode="decimal" aria-label="Property 3 rent"></label><label><span class="c">Per</span><select id="lm-p3-per" aria-label="Property 3 rent period"><option value="month">month</option><option value="week">week</option><option value="year">year</option></select></label><label><span class="c">Months let</span><input id="lm-p3-months" inputmode="numeric" aria-label="Property 3 months let" placeholder="12"></label><label><span class="c">Your share %</span><input id="lm-p3-share" inputmode="numeric" aria-label="Property 3 your share" placeholder="100"></label></div>
+    <div class="prow"><label class="nm"><span class="c">Property 4 (optional)</span><input id="lm-p4-name" aria-label="Property 4 name"></label><label><span class="c">Rent</span><input id="lm-p4-rent" inputmode="decimal" aria-label="Property 4 rent"></label><label><span class="c">Per</span><select id="lm-p4-per" aria-label="Property 4 rent period"><option value="month">month</option><option value="week">week</option><option value="year">year</option></select></label><label><span class="c">Months let</span><input id="lm-p4-months" inputmode="numeric" aria-label="Property 4 months let" placeholder="12"></label><label><span class="c">Your share %</span><input id="lm-p4-share" inputmode="numeric" aria-label="Property 4 your share" placeholder="100"></label></div>
+    <p class="small">Use the rent the tenant paid, before agent fees, repairs or mortgage interest. Months let: leave 12 unless it was empty or you bought or sold it during the year. More than 4 properties? Put the rest together as one yearly figure in the last row.</p>
+  </fieldset>
+
+  <div class="two">
+    <div>
+      <label for="lm-room">Lodger in your own home <span>(a year, before costs)</span></label>
+      <input id="lm-room" inputmode="decimal" placeholder="e.g. 6000">
+      <div class="check"><label><input type="checkbox" id="lm-room-shared">The lodger income is shared with someone</label></div>
+    </div>
+    <div>
+      <label for="lm-foreign">Rent from property abroad <span>(a year, your share)</span></label>
+      <input id="lm-foreign" inputmode="decimal">
+    </div>
+    <div>
+      <label for="lm-se">Self-employment turnover <span>(a year, all sole-trader work, before costs)</span></label>
+      <input id="lm-se" inputmode="decimal" placeholder="e.g. 9200">
+    </div>
+    <div>
+      <label for="lm-other">Wages, pensions, dividends, savings <span>(optional: to show they don't count)</span></label>
+      <input id="lm-other" inputmode="decimal">
+    </div>
+  </div>
+
+  <fieldset class="check">
+    <label><input type="checkbox" id="lm-new">I started letting for the first time during this tax year</label>
+    <div id="lm-new-wrap"><label for="lm-new-months">Months from the first letting to 5 April</label><input id="lm-new-months" inputmode="numeric" placeholder="e.g. 7" style="max-width:120px"></div>
+    <label><input type="checkbox" id="lm-nonres">I'm not UK resident (I file the SA109 residence pages)</label>
+    <label><input type="checkbox" id="lm-stopped">All my letting and self-employment has now stopped</label>
+  </fieldset>
+
+  <button type="submit">Check</button><button type="button" class="ghost" id="lm-example">Show an example</button>
+  <div id="lm-out" aria-live="polite"></div>
+</form>
+<script src="/assets/landlord-mtd.js"></script>
+
+<h2>What counts and what doesn't</h2>
+<table class="t">
+<tr><th>Counts towards the £30,000</th><th>Doesn't count</th></tr>
+<tr><td>
+<ul>
+<li>Rent from UK property, <strong>before</strong> expenses, mortgage interest and agent fees</li>
+<li>Your share only of jointly owned property</li>
+<li>Rent from property abroad, if you're UK resident</li>
+<li>Self-employment turnover from any sole-trader work, even a small side business</li>
+<li>Income from a property you sold during the year, if you still have another property or self-employment</li>
+<li>Lodger income over the Rent a Room limit, or that you put on your return</li>
+</ul>
+</td><td>
+<ul>
+<li>Wages, salary and anything taxed through PAYE</li>
+<li>State and private pensions</li>
+<li>Dividends, including from your own company</li>
+<li>Your profit share from a partnership</li>
+<li>Rent received by a limited company (companies aren't in MTD for Income Tax)</li>
+<li>Income from REITs and property funds</li>
+<li>Lodger income under £7,500 (£3,750 if shared) that you didn't declare</li>
+</ul>
+</td></tr>
+</table>
+<p class="small">Sources: <a href="https://www.gov.uk/guidance/work-out-your-qualifying-income-for-making-tax-digital-for-income-tax">Work out your qualifying income</a> (HMRC, updated 11 September 2026), <a href="https://www.gov.uk/rent-room-in-your-home">Rent a Room Scheme</a>, <a href="https://www.gov.uk/guidance/use-making-tax-digital-for-income-tax/create-digital-records">Create digital records</a>.</p>
+<p><strong>Married couples and civil partners:</strong> rent from a jointly owned property is normally split 50:50 for tax. If you've told HMRC on <a href="https://www.gov.uk/government/publications/income-tax-declaration-of-beneficial-interests-in-joint-property-and-income-17">Form 17</a> that you own it in different shares, use your actual share.</p>
+
+<h2>Six worked examples</h2>
+<p>All for the 2025 to 2026 tax year, so they decide April 2027. Every figure was run through the calculator above.</p>
+<table class="t">
+<tr><th>Landlord</th><th>What they have</th><th class="n">Qualifying income</th><th>Result</th></tr>
+<tr><td>Priya</td><td>One flat at £1,250 a month, plus a £38,000 NHS salary</td><td class="n">£15,000</td><td>Exempt (£20,000 or less). The salary doesn't count.</td></tr>
+<tr><td>Mark and Jo</td><td>Two houses owned 50:50, rents £2,100 and £1,500 a month</td><td class="n">£21,600 each</td><td>Not in for 2027. If 2026 to 2027 is similar, both are in from April 2028.</td></tr>
+<tr><td>Dev</td><td>One buy-to-let at £1,200 a month, plus £22,000 turnover as a self-employed electrician</td><td class="n">£36,400</td><td><strong>In from 6 April 2027.</strong> Rent alone wouldn't have done it.</td></tr>
+<tr><td>Sarah</td><td>Three flats, £33,000 rent a year; her agent keeps 15% and pays her £28,050</td><td class="n">£33,000</td><td><strong>In from 6 April 2027.</strong> The agent's fee is an expense, so it doesn't come off.</td></tr>
+<tr><td>Ahmed</td><td>A lodger paying £500 a month (£6,000), not declared, plus PAYE wages</td><td class="n">£0</td><td>Not in. Under the £7,500 Rent a Room limit.</td></tr>
+<tr><td>Helen</td><td>Lives in Spain, lets a London flat for £2,700 a month, files the SA109 pages</td><td class="n">£32,400</td><td><strong>In from 6 April 2027.</strong> Her SA109 exemption only covered 2026 to 2027.</td></tr>
+</table>
+
+<h2>If you're in from April 2027: what happens when</h2>
+<table class="t">
+<tr><th>When</th><th>What</th></tr>
+<tr><td>By 31 January 2027</td><td>File your 2025 to 2026 return the usual way. This is the one HMRC uses to decide.</td></tr>
+<tr><td>Early 2027</td><td>HMRC writes if you're over £30,000. Sign up through <a href="https://www.gov.uk/guidance/sign-up-for-making-tax-digital-for-income-tax">gov.uk</a> (or your agent does) and choose software.</td></tr>
+<tr><td>6 April 2027</td><td>Start digital records of rent and expenses (1 April if your accounts run to 31 March).</td></tr>
+<tr><td>7 August 2027</td><td>Quarterly update 1 (6 April to 5 July 2027)</td></tr>
+<tr><td>7 November 2027</td><td>Update 2 (the year so far, to 5 October)</td></tr>
+<tr><td>31 January 2028</td><td>Your 2026 to 2027 return, filed the usual way. The last one outside MTD.</td></tr>
+<tr><td>7 February 2028</td><td>Update 3 (the year so far, to 5 January)</td></tr>
+<tr><td>7 May 2028</td><td>Update 4 (the whole year, to 5 April 2028)</td></tr>
+<tr><td>31 January 2029</td><td>2027 to 2028 tax return, through your MTD software. Tax is still paid on 31 January and 31 July.</td></tr>
+</table>
+<p>Quarterly updates are totals worked out by your software, not tax returns. You send one even if nothing happened that quarter. All your UK properties count as one property business, so you send one update for them all, not one per property. Jointly let property: you can send just the income each quarter and add the expenses before filing the return (<a href="https://www.gov.uk/guidance/use-making-tax-digital-for-income-tax/send-quarterly-updates">send quarterly updates</a>, HMRC, updated 16 October 2026).</p>
+<p><strong>Penalties:</strong> the "no points for late updates" year was 2026 to 2027 only. From 2027 to 2028, each missed quarterly deadline earns a point, and 4 points means a £200 penalty, then £200 for each further miss. Late payment penalties start at 15 days late, but in your first year you get 30 days to pay or set up a payment plan (<a href="https://www.gov.uk/guidance/penalties-for-making-tax-digital-for-income-tax">MTD penalties</a>, HMRC).</p>
+
+<h2>The records you'll need to keep</h2>
+<p>A digital record for each rent payment and each expense: the date, the amount and the category. Below £90,000 of turnover you can record just "income" or "expense", but residential landlords also have to flag <strong>finance costs</strong> (mortgage interest), because those get tax relief at 20% instead of being deducted.</p>
+<ul>
+<li><strong>Income:</strong> rent, plus anything else tenants pay you for the let, such as premiums.</li>
+<li><strong>Expenses</strong> (the same categories as the property pages of the tax return): rent, rates, insurance and ground rent; repairs and maintenance; finance costs; legal, management and professional fees (agent fees go here); services such as cleaning and utilities you pay; travel; other.</li>
+<li>Keep the bank statements and invoices as well, as you do now.</li>
+</ul>
+<p><strong>Spreadsheets are allowed</strong> with "bridging" software that sends the figures from the sheet to HMRC. The figures must move digitally: linked cells, CSV import or an upload are fine; retyping or copy-and-paste between sheets is not. Find options with HMRC's <a href="https://www.gov.uk/guidance/find-software-that-works-with-making-tax-digital-for-income-tax">software finder</a>. HMRC doesn't recommend products, and neither do we.</p>
+
+<h2>Common mistakes</h2>
+<ul>
+<li><strong>Using profit.</strong> "I only make £12,000 after the mortgage" doesn't matter. The test is rent before costs.</li>
+<li><strong>Using what the agent pays you.</strong> Use the rent the tenant paid. Add the agent's fee back.</li>
+<li><strong>Counting the whole of a joint property.</strong> Only your share counts.</li>
+<li><strong>Forgetting the side business.</strong> £18,000 of rent and £13,000 of freelance work is £31,000: in.</li>
+<li><strong>Counting the deposit.</strong> A deposit you hold for the tenant isn't rent. Any part you keep for damage or unpaid rent usually is income: ask your accountant how to treat it.</li>
+<li><strong>Waiting for the letter.</strong> HMRC says it's your responsibility to check and sign up even if you don't get one.</li>
+</ul>
+
+<h2>A prompt to sort last year's rent figures</h2>
+<p>If your rent and costs are scattered across bank statements and agent statements, paste them into ChatGPT, Gemini or Claude with this. Take out names, addresses and account numbers first.</p>
+<pre class="prompt">I'm a UK landlord. Below are my rent and property cost lines for 6 April 2025 to 5 April 2026 (bank lines and letting agent statements). Please:
+1. Make a table of rent received per property, using the gross rent the tenant paid (add back any agent fee the agent deducted).
+2. Show my share where I've said a property is jointly owned.
+3. List the costs separately under: rent, rates, insurance, ground rent; repairs and maintenance; finance costs; legal, management and professional fees; services; travel; other.
+4. Give the total gross rent (my share) and add my self-employment turnover of £[amount or 0].
+5. Tell me whether that total is more than £30,000, and list anything you weren't sure how to treat.
+Don't give tax advice; flag anything I should check with an accountant.
+
+[paste lines here]</pre>
+
+<div class="cta">
+  <p><strong>Made by Polytheseus.</strong> We make AI skills, prompt packs and free tools for people with repetitive paperwork. This page and its calculator are free, with no sign-up. A landlord records sheet with property income headings and quarterly totals that match the MTD update periods is next on our list.</p>
+  <p>Got a bookkeeper or accountant? Send them this page. Bookkeepers will find the client-facing version, with a deadline checker and a client email, in our free <a href="/bookkeeper-skills/guides/making-tax-digital-income-tax">MTD guide for bookkeepers</a>. More free tools: <a href="/tools">polytheseus.com/tools</a>.</p>
+</div>
+
+<h2>FAQ</h2>
+<h3>Do landlords need Making Tax Digital from April 2027?</h3>
+<p>Yes, if your qualifying income for 2025 to 2026 is more than £30,000. That's your gross rent (your share) plus any self-employment turnover, from the return due on 31 January 2027.</p>
+<h3>Is the threshold based on rent or profit?</h3>
+<p>Rent. £32,000 of rent with £14,000 of costs is still over £30,000.</p>
+<h3>What if I own property through a limited company?</h3>
+<p>MTD for Income Tax is for individuals who file Self Assessment. Rent your company receives is in its Corporation Tax return, not your qualifying income. Dividends the company pays you don't count either.</p>
+<h3>I sold my rental during the year. Does it still count?</h3>
+<p>If you still have other property or self-employment income, yes: gov.uk says income from a source that stopped is included. If all your property and self-employment income stopped, tell HMRC before it signs you up.</p>
+<h3>Can I be exempt if I'm not good with computers?</h3>
+<p>Only if it isn't reasonable for you to use software at all, for example because of age, disability or no internet access where you live. HMRC won't accept "I've always filed on paper" or "it costs time and money". You apply for this <a href="https://www.gov.uk/guidance/find-out-if-you-can-get-an-exemption-from-making-tax-digital-for-income-tax">digital exclusion exemption</a>, and someone can help you, such as an agent, friend or family member.</p>
+<h3>Does MTD apply in Scotland, Wales and Northern Ireland?</h3>
+<p>Yes. MTD for Income Tax is a UK-wide HMRC rule, so the thresholds are the same everywhere.</p>
+
+<p class="small">This page explains HMRC's published rules in plain English. It's an estimate tool and general information, not tax advice: HMRC decides from your return, and your circumstances may differ. Check gov.uk or a qualified accountant. Last checked against gov.uk on 29 October 2026. Rules for 2028 onwards may change.</p>
+
+</main>
+<!-- pt:foot -->
+<footer class="pt-foot">
+  <div class="pt-foot-in">
+    <div>
+      <a class="pt-brand" href="/"><img src="/assets/favicon.svg" alt="" width="30" height="30"><span>POLYTHESEUS</span></a>
+      <p>Know-how packs that make ChatGPT, Gemini and Claude work like an experienced pro in your job. Free to start.</p>
+      <p><a href="mailto:support@polytheseus.com">support@polytheseus.com</a></p>
+    </div>
+    <div>
+      <h4>Packs</h4>
+      <ul><li><a href="/teacher-skills/">Teachers</a></li><li><a href="/trades-skills/">Trades</a></li><li><a href="/bookkeeper-skills/">Bookkeepers</a></li><li><a href="/real-estate-skills/">Real estate agents</a></li><li><a href="/seller-skills/">Online sellers</a></li><li><a href="/sre-skills/">SRE &amp; DevOps</a></li></ul>
+    </div>
+    <div>
+      <h4>Polytheseus</h4>
+      <ul>
+        <li><a href="/tools">Free tools</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/privacy">Privacy</a></li>
+        <li><a href="/terms">Terms</a></li>
+        <li><a href="https://github.com/polytheseus">GitHub</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Watch</h4>
+      <ul><li><a href="https://www.youtube.com/@polytheseus" rel="me noopener">YouTube</a></li><li><a href="https://www.tiktok.com/@polytheseus" rel="me noopener">TikTok</a></li><li><a href="https://www.facebook.com/profile.php?id=1374246585776738" rel="me noopener">Facebook</a></li></ul>
+    </div>
+  </div>
+  <div class="pt-foot-base">Polytheseus is run by Robin Hale. The packs and this site are written and tested by Claude, an AI agent. <a href="/#about">How that works</a>.</div>
+</footer>
+<!-- /pt:foot -->
+</body>
+</html>
