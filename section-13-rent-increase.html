@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Section 13 rent increase: Form 4A date calculator for England (2026 rules)</title>
+<meta name="description" content="Raising the rent in England since the Renters' Rights Act? Free calculator for the earliest Section 13 start date: 2 months' notice, 52 (or 53) weeks since the last increase, and the right rent day. With Form 4A answers, a cover letter and common mistakes.">
+<link rel="canonical" href="https://polytheseus.com/section-13-rent-increase">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Polytheseus">
+<meta property="og:title" content="When can I raise the rent? Section 13 date calculator">
+<meta property="og:description" content="Form 4A, 2 months' notice, once every 52 weeks, on a rent day. A free calculator that gives the earliest valid date and the last day to serve.">
+<meta property="og:url" content="https://polytheseus.com/section-13-rent-increase">
+<link rel="stylesheet" href="style.css">
+<style>
+main.wrap { max-width: 860px; }
+header.wrap { max-width: 860px; padding-top: 40px; }
+h2 { font-size: 30px; margin: 56px 0 8px; }
+.answer { background: var(--cream); border: 1px solid var(--line); border-left: 5px solid var(--orange); border-radius: 12px; padding: 16px 20px; margin: 24px 0; }
+.answer p { margin: .35em 0; }
+table.t, table.ri-t { width: 100%; border-collapse: collapse; background: #fff; font-size: 16px; margin: 12px 0 20px; }
+table.t th, table.t td, table.ri-t th, table.ri-t td { border: 1px solid var(--line); padding: 7px 10px; text-align: left; vertical-align: top; }
+table.t th, table.ri-t th { background: var(--cream); }
+tr.tot td { font-weight: 700; background: #faf6f0; }
+.tool { background: #fff; border: 2px solid var(--orange); border-radius: 16px; padding: 20px 22px; margin: 22px 0; }
+.tool label { display: block; font-weight: 600; margin: 10px 0 2px; font-size: 16px; }
+.tool label span { font-weight: 400; color: var(--muted); font-size: 14px; }
+.tool input, .tool select, .tool textarea { font: inherit; font-size: 16px; padding: 7px 9px; border: 1px solid var(--line); border-radius: 8px; background: #fff; width: 100%; box-sizing: border-box; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 0 14px; }
+.tool button { font: inherit; font-weight: 800; border: 0; border-radius: 999px; padding: 11px 22px; cursor: pointer; background: var(--orange); color: var(--ink); margin: 14px 8px 0 0; }
+.tool button.ghost { background: transparent; border: 2px solid var(--ink); padding: 9px 20px; }
+#ri-out { margin-top: 14px; }
+.ri-ok, .ri-no, .ri-err { border-radius: 10px; padding: 10px 14px; }
+.ri-ok { background: #e5f3ea; }
+.ri-no, .ri-err { background: #fbe3e3; }
+.ri-big { font-size: 20px; }
+.ri-note, .ri-warn { border-left: 4px solid var(--orange); padding: 2px 0 2px 12px; }
+.ri-warn { border-left-color: #c0392b; }
+.ri-small, .small { color: var(--muted); font-size: 15px; }
+#ri-letter { min-height: 300px; font: 15px/1.5 ui-monospace, Menlo, Consolas, monospace; }
+pre.prompt { white-space: pre-wrap; background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; font: 15px/1.55 ui-monospace, Menlo, Consolas, monospace; }
+.cta { background: var(--cream); border: 1px solid var(--line); border-radius: 16px; padding: 22px 24px; margin: 36px 0; }
+.scroll { overflow-x: auto; }
+[hidden] { display: none !important; }
+@media (max-width: 640px) { .two { grid-template-columns: 1fr; } }
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Article","headline":"Section 13 rent increase: Form 4A date calculator for England","datePublished":"2026-10-29","dateModified":"2026-10-29","author":{"@type":"Organization","name":"Polytheseus","url":"https://polytheseus.com/"}},
+{"@type":"FAQPage","mainEntity":[
+ {"@type":"Question","name":"How much notice do I need to give to increase rent in England?","acceptedAnswer":{"@type":"Answer","text":"At least two months, using Form 4A (the Section 13 notice). Since 1 May 2026 this applies to every private assured tenancy in England, whatever the rent period. The new rent must also start at least 52 weeks after the tenancy began or the last increase took effect, and on the first day of a rent period."}},
+ {"@type":"Question","name":"Can I still use a rent review clause in the tenancy agreement?","acceptedAnswer":{"@type":"Answer","text":"No. Since 1 May 2026 a clause that says the rent will or may go up has no effect for private assured tenancies in England. Every increase goes through the Section 13 process with Form 4A, even if your tenant has already agreed to it."}},
+ {"@type":"Question","name":"How often can a landlord increase the rent?","acceptedAnswer":{"@type":"Answer","text":"Once a year at most: the new rent can't start until 52 weeks after the last increase took effect (53 weeks in some cases, so the date doesn't drift earlier each year), and not in the first 52 weeks of the tenancy."}},
+ {"@type":"Question","name":"Is there a limit on how much rent can go up?","acceptedAnswer":{"@type":"Answer","text":"There's no fixed percentage cap. The tenant can ask the First-tier Tribunal to decide the open market rent before the new rent starts. The tribunal can't set a rent higher than the one in your notice, and the tenant doesn't pay the new amount until it decides."}},
+ {"@type":"Question","name":"Can I serve Form 4A by email?","acceptedAnswer":{"@type":"Answer","text":"Only if your tenancy agreement allows notices by email. Otherwise hand it over in person, leave it at the tenant's address or send it by post (Form 4A suggests registered post), and keep proof of when it was served."}},
+ {"@type":"Question","name":"What happens if I get the date wrong on a Section 13 notice?","acceptedAnswer":{"@type":"Answer","text":"A notice with a start date that's too soon, or not on a rent day, may be invalid, and a tenant can challenge it at the tribunal. Serve a new notice with a correct date rather than relying on a doubtful one."}}
+]}
+]}
+</script>
+<!-- pt:head -->
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/brand.css">
+<meta property="og:image" content="https://polytheseus.com/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /pt:head -->
+</head>
+<body>
+<!-- pt:bar -->
+<nav class="pt-bar" aria-label="Polytheseus">
+  <div class="pt-bar-in">
+    <a class="pt-brand" href="/"><img src="/assets/favicon.svg" alt="" width="30" height="30"><span>POLYTHESEUS</span></a>
+    <div class="pt-nav">
+      <a href="/#packs">Packs</a>
+      <a href="/tools">Free tools</a>
+      <a class="pt-hide-sm" href="/#how">How it works</a>
+      <a class="pt-hide-sm" href="/#about">About</a>
+      <a class="pt-cta" href="/#packs">Start free</a>
+    </div>
+  </div>
+</nav>
+<!-- /pt:bar -->
+<header class="wrap">
+  <p class="eyebrow">For landlords in England · Checked against gov.uk and the Housing Act on 29 October 2026</p>
+  <h1>Section 13 rent increase: when can the new rent start?</h1>
+  <p class="lede">Since the Renters' Rights Act came in on 1 May 2026, there's only one way to put the rent up for a private tenancy in England: a Section 13 notice on Form 4A. Get the start date wrong and the notice may not count. This free calculator works out the earliest valid date and the last day to serve it.</p>
+</header>
+
+<main class="wrap">
+
+<div class="answer">
+  <p><strong>The short answer.</strong> Fill in <a href="https://www.gov.uk/guidance/assured-tenancy-forms#Form4A">Form 4A</a> and serve it on your tenant. The new rent can start on the latest of these: <strong>2 months</strong> after the notice is served, <strong>52 weeks</strong> after the tenancy began, and <strong>52 weeks</strong> (sometimes 53) after the last increase took effect. It must also fall on the <strong>first day of a rent period</strong>, so a tenancy that started on the 20th has its new rent start on a 20th.</p>
+  <p>Rent review clauses in tenancy agreements no longer work, and you need Form 4A even if the tenant has agreed to the increase (<a href="https://www.gov.uk/assured-tenancy-agreements-a-guide-for-landlords">gov.uk landlord guide</a>).</p>
+</div>
+
+<h2>The four date rules</h2>
+<div class="scroll"><table class="t">
+<tr><th>Rule</th><th>What it means</th><th>Where it comes from</th></tr>
+<tr><td><strong>2 months' notice</strong></td><td>Counted from the day the notice is served, not the day you sign it. Allow time for post.</td><td>Housing Act 1988 s13(2)(a); Form 4A Note A2</td></tr>
+<tr><td><strong>Not in the first year</strong></td><td>The first increase can't start until 52 weeks after the tenancy began.</td><td>s13(2)(b); Note A3</td></tr>
+<tr><td><strong>Once every 52 weeks</strong></td><td>52 weeks after the last increase took effect. If that date would be more than six days before the anniversary of your first increase since 11 February 2003, it's 53 weeks.</td><td>s13(2)(c), (3A), (3B); Note A3</td></tr>
+<tr><td><strong>On a rent day</strong></td><td>The new rent starts at the beginning of a rent period: the same day of the month for monthly rent, the same weekday for weekly rent.</td><td>s13(2); Note A4</td></tr>
+</table></div>
+<p class="small">The 52-week rule counts increases from before 1 May 2026 too, whether they came from an old Form 4 or a rent review clause. A review-clause increase agreed before 1 May 2026 that was due to start after it doesn't apply. Form 4A also says the rent period must be a month or less.</p>
+
+<h2 id="calculator">Free calculator: your Section 13 dates</h2>
+<p>Type what you know. It stays in your browser: nothing is sent or saved.</p>
+<form class="tool" id="ri-form" autocomplete="off">
+  <div class="two">
+    <div><label for="ri-start">The tenancy started on <span>(Form 4A question 4.2)</span></label><input type="date" id="ri-start"></div>
+    <div><label for="ri-period">Rent is due</label>
+      <select id="ri-period">
+        <option value="month" selected>Monthly</option>
+        <option value="week">Weekly</option>
+        <option value="fortnight">Fortnightly</option>
+        <option value="4week">Every 4 weeks</option>
+        <option value="quarter">Quarterly</option>
+        <option value="year">Yearly</option>
+      </select></div>
+    <div><label for="ri-last">Last rent increase took effect on <span>(4.3; blank if none)</span></label><input type="date" id="ri-last"></div>
+    <div><label for="ri-first">First increase after 11 Feb 2003 <span>(4.4; blank if none or same as 4.3)</span></label><input type="date" id="ri-first"></div>
+    <div><label for="ri-serve">You'll serve the notice on</label><input type="date" id="ri-serve"></div>
+    <div><label for="ri-method">How</label>
+      <select id="ri-method">
+        <option value="hand" selected>By hand, or left at the tenant's address</option>
+        <option value="post">By post</option>
+        <option value="email">By email (only if the tenancy agreement allows it)</option>
+      </select></div>
+    <div><label for="ri-cur">Current rent, £ per period <span>(optional)</span></label><input inputmode="decimal" id="ri-cur" placeholder="e.g. 1050"></div>
+    <div><label for="ri-new">Proposed new rent, £ per period <span>(optional)</span></label><input inputmode="decimal" id="ri-new" placeholder="e.g. 1110"></div>
+  </div>
+  <label for="ri-target">Check a start date you have in mind <span>(optional)</span></label>
+  <input type="date" id="ri-target" style="max-width: 260px">
+  <div>
+    <button type="submit">Work out my dates</button>
+    <button type="button" class="ghost" id="ri-example">Try an example</button>
+  </div>
+  <div id="ri-out" aria-live="polite"></div>
+  <div id="ri-letter-wrap" hidden>
+    <p><strong>A covering letter to go with the form</strong> (optional, friendly, and never a replacement for Form 4A). Edit the parts in brackets:</p>
+    <textarea id="ri-letter" aria-label="Covering letter"></textarea>
+    <button type="button" id="ri-copy">Copy the letter</button>
+  </div>
+</form>
+<script src="/assets/rent-increase.js"></script>
+
+<h2>Worked examples</h2>
+<p>All of these were run through the calculator above.</p>
+<ol>
+<li><strong>The gov.uk example.</strong> A monthly tenancy that pays on the 1st had an increase from 1 February 2026. 52 weeks later is Sunday 31 January 2027, so the next rent day, <strong>1 February 2027</strong>, is the earliest the next increase can start. Serve the notice by hand by 1 December 2026.</li>
+<li><strong>Posting it this week.</strong> The tenancy started on 20 March 2024; the rent went up on 20 January 2025 and again on 20 January 2026. Posted on Thursday 29 October 2026, the notice counts as served on Monday 2 November, so 2 months takes you to 2 January 2027. 52 weeks after the last increase is 19 January, so the next rent day, <strong>20 January 2027</strong>, works. Post it by 18 November to keep that date. The increase after that could start on 20 January 2028.</li>
+<li><strong>A new tenancy.</strong> Started on 15 May 2026. However early you serve, the first increase can't start until 52 weeks have passed (14 May 2027), so the earliest is the rent day after that: <strong>15 May 2027</strong>.</li>
+<li><strong>The 31 December trap.</strong> Served by hand on 31 December 2026, "2 months later" would be 31 February, which doesn't exist. The calculator plays safe and uses <strong>1 March 2027</strong>, which also suits a tenancy that pays on the 1st.</li>
+<li><strong>A weekly tenancy and the 53-week rule.</strong> Rent is due on Mondays. The first increase was Monday 6 April 2020 and the last one Monday 30 March 2026. 52 weeks on is 29 March 2027, eight days before the anniversary of the first increase, so it becomes 53 weeks: <strong>Monday 5 April 2027</strong>.</li>
+</ol>
+
+<h2>Filling in and serving Form 4A</h2>
+<ul>
+<li><strong>Use the new form.</strong> Form 4A (dated 05.26 in the footer) is for private tenancies from 1 May 2026. The old Form 4 is now for social housing. Don't change the wording: gov.uk says a changed form may not be valid.</li>
+<li><strong>Question 4.2:</strong> the date the tenancy started. <strong>4.3:</strong> the date the most recent increase took effect, or blank. <strong>4.4:</strong> the first increase after 11 February 2003; it decides whether 52 or 53 weeks apply.</li>
+<li><strong>4.5 and 4.1:</strong> the rent per rent period (per month, per week). <strong>4.7:</strong> only bills included in the rent that the tenant doesn't pay separately, such as council tax or a fixed service charge.</li>
+<li><strong>Names:</strong> every joint tenant's name. Joint landlords either all sign or agree that one signs for everyone.</li>
+<li><strong>Serving it:</strong> use a method your tenancy agreement lists. If it doesn't list one, hand it over, leave it at the tenant's address or send it by registered post. Email counts only if the agreement allows it. Keep proof: a photo of the form going through the door, the post receipt, or the sent email.</li>
+<li><strong>Talk first.</strong> gov.uk suggests discussing the increase with your tenant before you serve. A short letter with the form (the calculator writes one) helps.</li>
+</ul>
+
+<h2>How much can the rent go up?</h2>
+<p>There's no percentage cap. What limits it is the <strong>open market rent</strong>: what the home would let for on the open market on the same terms. If your tenant thinks your figure is higher than that, they can apply to the First-tier Tribunal (Property Chamber) before the new rent's start date (<a href="https://www.gov.uk/guidance/apply-for-an-open-market-rent-determination">gov.uk</a>; the tenant's fee is £47, with help available).</p>
+<ul>
+<li>The tribunal can set a rent lower than yours, but <strong>never higher</strong> than the one in your notice.</li>
+<li>The tenant <strong>keeps paying the old rent</strong> until the tribunal decides. The new rent then starts from the date in your notice or, if that's passed, the next rent day after the decision. No backdating.</li>
+<li>If that would cause the tenant undue hardship, the tribunal can delay the start by up to 2 months.</li>
+<li>The tribunal can take the property's condition into account. Fix outstanding repairs before you ask for more.</li>
+<li>Tenants can also challenge the starting rent in the first 6 months of a tenancy.</li>
+</ul>
+<p>Check comparable homes on the property portals before you pick a figure, and be ready to explain it. If your tenant claims Universal Credit or Housing Benefit, Form 4A reminds them to report the change; the <a href="https://lha-direct.voa.gov.uk/">Local Housing Allowance rates</a> show what their help covers.</p>
+
+<h2>Common mistakes</h2>
+<ul>
+<li><strong>Counting 2 months from the date on the form.</strong> It's from when the tenant receives it. Posting on a Friday before a bank holiday can cost you nearly a week.</li>
+<li><strong>Picking a date that isn't a rent day.</strong> The 1st of the month is wrong for a tenancy that pays on the 20th.</li>
+<li><strong>Relying on the rent review clause.</strong> It stopped working on 1 May 2026. Use Form 4A.</li>
+<li><strong>"We agreed it, so I don't need the form."</strong> You do: gov.uk says the Section 13 process applies every time, even when the tenant agrees.</li>
+<li><strong>Forgetting an increase from before May 2026.</strong> It still starts the 52-week clock.</li>
+<li><strong>Using the old Form 4</strong> or editing the form's wording.</li>
+<li><strong>Emailing it</strong> when the tenancy agreement doesn't allow notices by email.</li>
+</ul>
+
+<h2>What this doesn't cover</h2>
+<ul>
+<li><strong>Wales, Scotland and Northern Ireland</strong> have their own rules: <a href="https://www.gov.wales/notice-variation-rent-form-rhw12">Wales (form RHW12)</a>, <a href="https://www.mygov.scot/landlords-rent-increase-notice-to-tenants/">Scotland</a>, <a href="https://www.nidirect.gov.uk/articles/private-rent-and-tenancies">Northern Ireland</a>.</li>
+<li><strong>Social housing</strong> (Form 4), <strong>assured agricultural occupancies</strong> (Form 5A) and old <strong>regulated tenancies</strong> (<a href="https://www.gov.uk/renting-out-a-property/changing-regulated-tenancy">gov.uk</a>) follow different routes.</li>
+<li><strong>Lodgers</strong> in your own home aren't assured tenants: agree changes with them directly.</li>
+<li><strong>A notice served before 1 May 2026</strong> on the old Form 4 still runs on its own terms.</li>
+</ul>
+
+<h2>A prompt for the conversation with your tenant</h2>
+<p>Paste this into ChatGPT, Gemini or Claude and fill in the brackets. Leave out the tenant's name and address.</p>
+<pre class="prompt">I'm a landlord in England. I'm proposing to increase the rent on a [2-bed flat] from £[current] to £[new] per [month], starting [date], using Form 4A. Similar homes nearby are let for: [list 3–5 with rents]. Since the last increase I've [repairs or improvements, or "made no changes"].
+Please:
+1. Tell me, using only the comparables I've given, whether my figure looks in line, high or low, and why.
+2. Draft a short, friendly message to my tenant explaining the increase before I serve the form, inviting them to talk to me if they're worried about paying.
+3. List anything I should fix or check first that a tribunal might take into account.
+Don't give legal advice; tell me if anything should be checked with a housing adviser or solicitor.</pre>
+
+<div class="cta">
+  <p><strong>Made by Polytheseus.</strong> We make AI skills, prompt packs and free tools for people with repetitive paperwork. This page and its calculator are free, with no sign-up.</p>
+  <p>More for landlords: <a href="/mtd-for-landlords">Making Tax Digital for landlords: the £30,000 test</a> (with a calculator). A landlord records sheet is next on our list. All our free tools: <a href="/tools">polytheseus.com/tools</a>.</p>
+</div>
+
+<h2>FAQ</h2>
+<h3>How much notice do I need to give to increase rent in England?</h3>
+<p>At least two months on Form 4A, for every private assured tenancy since 1 May 2026, whatever the rent period. The other three rules above decide the earliest date too.</p>
+<h3>Can I still use a rent review clause?</h3>
+<p>No. Since 1 May 2026 a clause that says the rent will or may go up has no effect. Every increase goes through Section 13.</p>
+<h3>How often can I increase the rent?</h3>
+<p>Once a year at most: 52 weeks after the last increase took effect (53 in some cases), and not in the first 52 weeks of the tenancy.</p>
+<h3>Is there a cap on rent increases?</h3>
+<p>No fixed cap. The tenant can ask the tribunal to decide the open market rent before the start date. It can't go higher than your figure, and the tenant pays the old rent until it decides.</p>
+<h3>Can I serve Form 4A by email?</h3>
+<p>Only if your tenancy agreement allows notices by email. Otherwise by hand, at the address or by post, with proof.</p>
+<h3>What if I get the date wrong?</h3>
+<p>A start date that's too soon or not on a rent day may make the notice invalid, and the tenant can challenge it. Serve a new notice with a correct date rather than relying on a doubtful one.</p>
+
+<p class="small">This page explains the rules on gov.uk and in the Housing Act 1988 (as amended by the Renters' Rights Act 2025) in plain English. It's general information, not legal advice: your tenancy may have features that change the answer. If in doubt, check with a solicitor, a housing adviser or your landlord association. Service dates use the usual court rules (posted: second working day after posting; email: the working day it's sent), and England and Wales bank holidays to the end of 2028. Last checked on 29 October 2026.</p>
+
+</main>
+<!-- pt:foot -->
+<footer class="pt-foot">
+  <div class="pt-foot-in">
+    <div>
+      <a class="pt-brand" href="/"><img src="/assets/favicon.svg" alt="" width="30" height="30"><span>POLYTHESEUS</span></a>
+      <p>Know-how packs that make ChatGPT, Gemini and Claude work like an experienced pro in your job. Free to start.</p>
+      <p><a href="mailto:support@polytheseus.com">support@polytheseus.com</a></p>
+    </div>
+    <div>
+      <h4>Packs</h4>
+      <ul><li><a href="/teacher-skills/">Teachers</a></li><li><a href="/trades-skills/">Trades</a></li><li><a href="/bookkeeper-skills/">Bookkeepers</a></li><li><a href="/real-estate-skills/">Real estate agents</a></li><li><a href="/seller-skills/">Online sellers</a></li><li><a href="/sre-skills/">SRE &amp; DevOps</a></li></ul>
+    </div>
+    <div>
+      <h4>Polytheseus</h4>
+      <ul>
+        <li><a href="/tools">Free tools</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/privacy">Privacy</a></li>
+        <li><a href="/terms">Terms</a></li>
+        <li><a href="https://github.com/polytheseus">GitHub</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Watch</h4>
+      <ul><li><a href="https://www.youtube.com/@polytheseus" rel="me noopener">YouTube</a></li><li><a href="https://www.tiktok.com/@polytheseus" rel="me noopener">TikTok</a></li><li><a href="https://www.facebook.com/profile.php?id=1374246585776738" rel="me noopener">Facebook</a></li></ul>
+    </div>
+  </div>
+  <div class="pt-foot-base">Polytheseus is run by Robin Hale. The packs and this site are written and tested by Claude, an AI agent. <a href="/#about">How that works</a>.</div>
+</footer>
+<!-- /pt:foot -->
+</body>
+</html>

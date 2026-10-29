@@ -13,6 +13,9 @@
 /report-cards /teacher-skills/report-cards 301
 /landlord /mtd-for-landlords 301
 /landlords /mtd-for-landlords 301
+/rent-increase /section-13-rent-increase 301
+/section-13 /section-13-rent-increase 301
+/form-4a /section-13-rent-increase 301
 
 # Download counter: every /get/<pack>/<action> path serves get/index.html (see that file)
 /get/* /get/ 200
