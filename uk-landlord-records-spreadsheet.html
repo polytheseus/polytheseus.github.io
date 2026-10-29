@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Landlord spreadsheet for Making Tax Digital (UK): quarterly updates, SA105 totals</title>
+<meta name="description" content="An Excel and Google Sheets record book for UK landlords: MTD quarterly update totals in HMRC's categories, joint ownership shares, SA105 box totals and profit by property. £14, one-off.">
+<link rel="canonical" href="https://polytheseus.com/uk-landlord-records-spreadsheet">
+<meta property="og:type" content="product">
+<meta property="og:site_name" content="Polytheseus">
+<meta property="og:title" content="The landlord records spreadsheet, ready for Making Tax Digital">
+<meta property="og:description" content="Enter each rent payment and bill once. Quarterly update totals, your share and the SA105 boxes fill in by themselves.">
+<meta property="og:url" content="https://polytheseus.com/uk-landlord-records-spreadsheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.sheet { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; background: #fff; margin: 18px 0 8px; }
+.sheet table { border-collapse: collapse; width: 100%; font-size: 15px; min-width: 720px; }
+.sheet th { background: #1f4e78; color: #fff; text-align: left; padding: 8px 10px; font-weight: 700; }
+.sheet td { padding: 7px 10px; border-top: 1px solid #e4e4e4; white-space: nowrap; }
+.sheet td.n, .sheet th.n { text-align: right; font-variant-numeric: tabular-nums; }
+.sheet td.auto { background: #eef5ff; }
+.sheet tr.tot td { font-weight: 700; background: #f7f7f7; }
+.cap { color: var(--muted); font-size: 15px; margin: 0 0 24px; }
+.buy { background: var(--cream); border: 1px solid var(--line); border-radius: 16px; padding: 24px; margin: 28px 0; }
+.buy .price { font-size: 34px; font-weight: 800; color: var(--ink); margin: 0; }
+.tabs-list li { margin-bottom: 8px; }
+.note { border-left: 4px solid var(--orange); padding: 4px 0 4px 16px; margin: 20px 0; }
+main.wrap { max-width: 860px; }
+header.wrap { max-width: 860px; padding-top: 40px; }
+</style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Product", "name": "UK Landlord Records Spreadsheet (MTD-ready)", "description": "Excel and Google Sheets record keeper for UK landlords with 1 to 10 properties: Making Tax Digital quarterly update totals in HMRC's UK property categories, joint ownership shares, SA105 box totals, profit by property and the MTD qualifying income check.", "brand": {"@type": "Brand", "name": "Polytheseus"}, "url": "https://polytheseus.com/uk-landlord-records-spreadsheet", "image": ["https://polytheseus.com/assets/og.png"], "offers": {"@type": "Offer", "price": "14.00", "priceCurrency": "GBP", "availability": "https://schema.org/InStock", "url": "https://buy.polar.sh/polar_cl_GuFAPenA5N8sxyI67sftnJdFQkg3KuXwFQ2As1oeXkP", "hasMerchantReturnPolicy": {"@type": "MerchantReturnPolicy", "applicableCountry": "GB", "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow", "merchantReturnDays": 14, "returnFees": "https://schema.org/FreeReturn", "refundType": "https://schema.org/FullRefund", "merchantReturnLink": "https://polytheseus.com/terms"}}}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is a spreadsheet allowed for Making Tax Digital?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, with bridging software. HMRC accepts spreadsheets as digital records if the figures reach HMRC digitally, for example through linked cells or a CSV import into bridging software; retyping or copying and pasting between sheets is not allowed. This sheet keeps every quarterly total in a fixed cell so bridging tools can read it. It does not send anything to HMRC itself."}}, {"@type": "Question", "name": "Does it work in Google Sheets?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Upload the .xlsx to Google Drive and open it with Google Sheets. It also opens in Excel, LibreOffice Calc and Apple Numbers."}}, {"@type": "Question", "name": "How does it handle a jointly owned property?", "acceptedAnswer": {"@type": "Answer", "text": "You enter the full rent or bill and your share on the Setup tab (for example 50%). Every total then uses your share, which is what you report."}}, {"@type": "Question", "name": "Where does mortgage interest go?", "acceptedAnswer": {"@type": "Answer", "text": "Pick 'Residential finance costs'. It goes into the quarterly update and SA105 box 44, but isn't taken off your profit: for residential lets HMRC gives a basic-rate tax reduction instead. The sheet keeps it separate."}}, {"@type": "Question", "name": "Is this tax advice?", "acceptedAnswer": {"@type": "Answer", "text": "No. It's a record-keeping template that adds up your figures in HMRC's categories. It doesn't work out your tax. Check gov.uk or an accountant for your situation."}}]}
+</script>
+<!-- pt:head -->
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/brand.css">
+<meta property="og:image" content="https://polytheseus.com/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /pt:head -->
+</head>
+<body>
+<!-- pt:bar -->
+<nav class="pt-bar" aria-label="Polytheseus">
+  <div class="pt-bar-in">
+    <a class="pt-brand" href="/"><img src="/assets/favicon.svg" alt="" width="30" height="30"><span>POLYTHESEUS</span></a>
+    <div class="pt-nav">
+      <a href="/#packs">Packs</a>
+      <a href="/tools">Free tools</a>
+      <a class="pt-hide-sm" href="/#how">How it works</a>
+      <a class="pt-hide-sm" href="/#about">About</a>
+      <a class="pt-cta" href="/#packs">Start free</a>
+    </div>
+  </div>
+</nav>
+<!-- /pt:bar -->
+
+<header class="wrap">
+  <p class="eyebrow">For UK landlords · 1 to 10 properties · Excel and Google Sheets</p>
+  <h1>The landlord records spreadsheet, ready for Making Tax Digital</h1>
+  <p class="lede">Enter each rent payment and bill once: date, property, category, amount. Your share, the quarterly update totals in HMRC's own categories and your SA105 figures fill in by themselves.</p>
+  <p><a class="btn" href="https://buy.polar.sh/polar_cl_GuFAPenA5N8sxyI67sftnJdFQkg3KuXwFQ2As1oeXkP">Get the spreadsheet: £14</a> <a class="btn ghost" href="/mtd-for-landlords#calculator">Do I need MTD? Free check</a></p>
+  <p class="fine">One-off payment · Instant download · 14-day guarantee · Also $18 / €16</p>
+</header>
+
+<main class="wrap">
+
+<h2>What it looks like</h2>
+<p>These are the four example rows that come in the sheet (one flat owned outright, one house owned 50:50). You type the white columns; the blue ones work themselves out.</p>
+<div class="sheet"><table>
+<tr><th>Date</th><th>Property</th><th>Category</th><th class="n">Amount</th><th class="n">Your share</th><th>HMRC category</th><th class="n">Period</th></tr>
+<tr><td>28/04/2026</td><td>Flat 2 Elm Rd</td><td>Rent</td><td class="n">950.00</td><td class="n auto">950.00</td><td class="auto">Total rent</td><td class="n auto">1</td></tr>
+<tr><td>06/05/2026</td><td>Flat 2 Elm Rd</td><td>Repairs and maintenance</td><td class="n">90.00</td><td class="n auto">90.00</td><td class="auto">Property repairs and maintenance</td><td class="n auto">1</td></tr>
+<tr><td>15/05/2026</td><td>12 Park St</td><td>Residential finance costs</td><td class="n">410.00</td><td class="n auto">205.00</td><td class="auto">Residential property finance costs</td><td class="n auto">1</td></tr>
+<tr><td>10/07/2026</td><td>12 Park St</td><td>Rent</td><td class="n">1,200.00</td><td class="n auto">600.00</td><td class="auto">Total rent</td><td class="n auto">2</td></tr>
+</table></div>
+<p class="cap">10 July is in period 2 because standard update periods follow the tax year: 6 April to 5 July, 6 July to 5 October, and so on.</p>
+
+<p>And the Quarterly updates tab for those rows (2026/27, cumulative, as HMRC wants each update):</p>
+<div class="sheet"><table>
+<tr><th>HMRC category</th><th class="n">Update 1<br>to 5 Jul</th><th class="n">Update 2<br>to 5 Oct</th><th class="n">Update 3<br>to 5 Jan</th><th class="n">Update 4<br>to 5 Apr</th></tr>
+<tr><td>Total rent</td><td class="n">950.00</td><td class="n">1,550.00</td><td class="n">1,550.00</td><td class="n">1,550.00</td></tr>
+<tr><td>Property repairs and maintenance</td><td class="n">90.00</td><td class="n">90.00</td><td class="n">90.00</td><td class="n">90.00</td></tr>
+<tr><td>Residential property finance costs</td><td class="n">205.00</td><td class="n">205.00</td><td class="n">205.00</td><td class="n">205.00</td></tr>
+<tr class="tot"><td>Deadline</td><td class="n">7 Aug 2026</td><td class="n">7 Nov 2026</td><td class="n">7 Feb 2027</td><td class="n">7 May 2027</td></tr>
+</table></div>
+<p class="cap">All 13 HMRC UK property categories are listed (most are zero here), plus each period on its own, the rows-needing-attention count and the brought-forward finance costs line.</p>
+
+<div class="buy">
+  <p class="price">£14</p>
+  <p>The spreadsheet (.xlsx), a CSV template for pasting bank lines and a quick-start note. For your own property business, yours to keep.</p>
+  <p><a class="btn" href="https://buy.polar.sh/polar_cl_GuFAPenA5N8sxyI67sftnJdFQkg3KuXwFQ2As1oeXkP">Buy and download</a></p>
+  <p class="small">Secure checkout by Polar, our merchant of record. Your receipt email has the download link.</p>
+</div>
+
+<h2>What's inside</h2>
+<ul class="tabs-list">
+  <li><b>Setup:</b> pick the tax year (2025/26, 2026/27 or 2027/28) and standard or calendar update periods, and list up to 10 properties with your share and type (residential, non-residential, room in your home).</li>
+  <li><b>Transactions:</b> 1,000 rows with dropdowns for property and category. Your share, the HMRC category, tax year and update period fill in, and a check column flags a missing date, category or property.</li>
+  <li><b>Quarterly updates:</b> totals for each HMRC UK property category, per period and cumulative, with the deadline for each update, the jointly-let option explained, and one expenses total for landlords under £90,000.</li>
+  <li><b>By property:</b> income, costs and profit for each property, so you can see which one earns its keep.</li>
+  <li><b>Year summary:</b> SA105 boxes 20 to 29, 36, 44 and 45, the £1,000 property allowance comparison, rent from rooms in your home, and the Making Tax Digital qualifying income check (£50,000, £30,000 or £20,000 depending on the year).</li>
+  <li><b>Categories:</b> what goes where, with examples and what doesn't count (deposits you hold, mortgage capital, improvements).</li>
+</ul>
+
+<h2>Why keep records this way now</h2>
+<p>From 6 April 2026 landlords and sole traders with more than £50,000 of qualifying income must keep digital records and send HMRC quarterly updates; from April 2027 it's more than £30,000 (tested on 2025/26 income), and from April 2028 more than £20,000 (<a href="https://www.gov.uk/guidance/check-if-youre-eligible-for-making-tax-digital-for-income-tax">gov.uk</a>). Qualifying income is your gross rent (your share) plus any self-employment turnover, not your profit. Not sure if that's you? The <a href="/mtd-for-landlords#calculator">free £30,000 test</a> works it out.</p>
+<p>Each update has to use HMRC's categories and cover the tax year so far (<a href="https://www.gov.uk/guidance/use-making-tax-digital-for-income-tax/send-quarterly-updates">gov.uk, send quarterly updates</a>). This sheet uses the exact names in HMRC's <a href="https://www.gov.uk/government/publications/update-notice-for-making-tax-digital-for-income-tax">quarterly update direction</a>, so the totals match what your bridging software asks for. Even if you're not in MTD yet, the same figures fill in the SA105 pages of your tax return.</p>
+<div class="note">
+  <p><b>Raising the rent this year?</b> In England, since 1 May 2026, the only way is a Section 13 notice on Form 4A. Our free <a href="/section-13-rent-increase#calculator">rent increase date calculator</a> gives the earliest start date and the last day to serve.</p>
+</div>
+
+<h2>Honest notes</h2>
+<ul>
+  <li>It's a <b>record-keeping template, not tax advice</b>. It adds up your figures in HMRC's categories; it doesn't work out your tax. Check gov.uk or an accountant for your situation.</li>
+  <li>It doesn't send anything to HMRC. Under Making Tax Digital you also need <b>bridging software</b> to send the updates from a spreadsheet (HMRC's <a href="https://www.gov.uk/guidance/find-software-that-works-with-making-tax-digital-for-income-tax">software finder</a> lists them). We don't recommend a product.</li>
+  <li>UK property only: foreign property is a separate business with its own records. Cash basis (money in and out when paid), the default for property income up to £150,000.</li>
+  <li>Lease premiums are shown in full: only part is taxable, so use HMRC's working sheet if you had one.</li>
+  <li>Categories and box numbers were checked against HMRC's direction and the SA105 2026 form and notes on 29 October 2026.</li>
+  <li>Built with AI (Claude) and tested automatically: the workbook is recalculated in LibreOffice and checked against 60 tests, including period boundaries (5 and 6 July), joint shares, refunds, calendar periods and the "more than £30,000" rule.</li>
+</ul>
+
+<section class="faq">
+<h2>Questions</h2>
+<h3>Is a spreadsheet allowed for Making Tax Digital?</h3>
+<p>Yes, with bridging software. HMRC accepts spreadsheets as digital records if the figures reach HMRC digitally, for example through linked cells or a CSV import into bridging software; retyping or copying and pasting between sheets is not allowed. This sheet keeps every quarterly total in a fixed cell so bridging tools can read it. It does not send anything to HMRC itself.</p>
+<h3>Does it work in Google Sheets?</h3>
+<p>Yes. Upload the .xlsx to Google Drive and open it with Google Sheets. It also opens in Excel, LibreOffice Calc and Apple Numbers.</p>
+<h3>How does it handle a jointly owned property?</h3>
+<p>You enter the full rent or bill and your share on the Setup tab (for example 50%). Every total then uses your share, which is what you report.</p>
+<h3>Where does mortgage interest go?</h3>
+<p>Pick 'Residential finance costs'. It goes into the quarterly update and SA105 box 44, but isn't taken off your profit: for residential lets HMRC gives a basic-rate tax reduction instead. The sheet keeps it separate.</p>
+<h3>Is this tax advice?</h3>
+<p>No. It's a record-keeping template that adds up your figures in HMRC's categories. It doesn't work out your tax. Check gov.uk or an accountant for your situation.</p>
+<h3>Do you see my figures?</h3>
+<p>No. It's a file on your computer or in your own Google Drive. Nothing is sent to us.</p>
+<h3>What if it doesn't work for me?</h3>
+<p>If it doesn't work as described, reply to your receipt within 14 days, tell us what went wrong, and you'll get a full refund (<a href="/terms">terms</a>).</p>
+<h3>I'm a letting agent or bookkeeper.</h3>
+<p>The licence covers one property business, so use one copy per client. Bookkeepers: our free <a href="/bookkeeper-skills/guides/making-tax-digital-income-tax">MTD guide for bookkeepers</a> has a deadline checker and a client email.</p>
+</section>
+
+</main>
+<!-- pt:foot -->
+<footer class="pt-foot">
+  <div class="pt-foot-in">
+    <div>
+      <a class="pt-brand" href="/"><img src="/assets/favicon.svg" alt="" width="30" height="30"><span>POLYTHESEUS</span></a>
+      <p>Know-how packs that make ChatGPT, Gemini and Claude work like an experienced pro in your job. Free to start.</p>
+      <p><a href="mailto:support@polytheseus.com">support@polytheseus.com</a></p>
+    </div>
+    <div>
+      <h4>Packs</h4>
+      <ul><li><a href="/teacher-skills/">Teachers</a></li><li><a href="/trades-skills/">Trades</a></li><li><a href="/bookkeeper-skills/">Bookkeepers</a></li><li><a href="/real-estate-skills/">Real estate agents</a></li><li><a href="/seller-skills/">Online sellers</a></li><li><a href="/sre-skills/">SRE &amp; DevOps</a></li></ul>
+    </div>
+    <div>
+      <h4>Polytheseus</h4>
+      <ul>
+        <li><a href="/tools">Free tools</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/privacy">Privacy</a></li>
+        <li><a href="/terms">Terms</a></li>
+        <li><a href="https://github.com/polytheseus">GitHub</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Watch</h4>
+      <ul><li><a href="https://www.youtube.com/@polytheseus" rel="me noopener">YouTube</a></li><li><a href="https://www.tiktok.com/@polytheseus" rel="me noopener">TikTok</a></li><li><a href="https://www.facebook.com/profile.php?id=1374246585776738" rel="me noopener">Facebook</a></li></ul>
+    </div>
+  </div>
+  <div class="pt-foot-base">Polytheseus is run by Robin Hale. The packs and this site are written and tested by Claude, an AI agent. <a href="/#about">How that works</a>.</div>
+</footer>
+<!-- /pt:foot -->
+</body>
+</html>
