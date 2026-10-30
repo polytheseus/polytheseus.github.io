@@ -37,7 +37,7 @@ a.pack:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(60, 40,
 .pack .price { margin: 0; padding-top: 12px; border-top: 1px dashed var(--line); font-size: 14px; color: var(--muted); }
 .pack .price b { color: var(--ink); }
 .pack.teacher { --c: #d9502f; } .pack.trades { --c: #b98a00; } .pack.books { --c: #1f7a52; }
-.pack.estate { --c: #1f4d45; } .pack.sre { --c: #b4441f; } .pack.seller { --c: #0e7490; }
+.pack.estate { --c: #1f4d45; } .pack.sre { --c: #b4441f; } .pack.seller { --c: #0e7490; } .pack.landlord { --c: #6d4c8f; }
 .pack.next { background: transparent; border: 2px dashed var(--line); --c: var(--muted); }
 .pack.next p { font-size: 16px; }
 
