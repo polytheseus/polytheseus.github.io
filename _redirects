@@ -33,6 +33,9 @@
 /landlord /landlord-skills/ 301
 /landlords /landlord-skills/ 301
 /mtd-landlords /mtd-for-landlords 301
+/landlord-tax /landlord-tax-2027 301
+/property-tax-2027 /landlord-tax-2027 301
+/rental-tax /landlord-tax-2027 301
 /landlord-database /landlord-database-registration 301
 /prs-database /landlord-database-registration 301
 /landlord-register /landlord-database-registration 301
