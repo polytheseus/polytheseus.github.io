@@ -188,7 +188,8 @@
       h += "<p><strong>Your timeline:</strong></p><ol class=\"lm-tl\">";
       r.timeline.forEach(function (t) { h += "<li><strong>" + esc(t.date) + ":</strong> " + esc(t.what) + "</li>"; });
       h += "</ol>";
-      if (r.start >= 2027) h += "<p class=\"lm-note\">From " + r.start + " to " + (r.start + 1) + ", each late quarterly update earns a penalty point and 4 points means a £200 penalty. The no-points year was 2026 to 2027 only.</p>";
+      if (r.start === 2027) h += "<p class=\"lm-note\">Budget 2026 (28 October 2026) said landlords joining in April 2027 won't get penalty points for late quarterly updates in 2027 to 2028. You still need all four updates before you can file that year's return, and points apply from 2028 to 2029.</p>";
+      else if (r.start >= 2028) h += "<p class=\"lm-note\">From " + r.start + " to " + (r.start + 1) + ", each late quarterly update earns a penalty point and 4 points means a £200 penalty. The no-points first years announced so far cover only those joining in April 2026 or April 2027.</p>";
     }
     h += "<p class=\"lm-small\">An estimate from what you typed, not tax advice. HMRC decides from your return; check with its own tool on gov.uk or an accountant.</p>";
     return h;
