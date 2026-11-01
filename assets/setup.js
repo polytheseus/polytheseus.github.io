@@ -12,6 +12,7 @@ function count(action) {
   f.setAttribute('aria-hidden', 'true');
   f.tabIndex = -1;
   document.body.appendChild(f);
+  return f;
 }
 document.querySelectorAll('.pt-setup').forEach(function (s) {
   s.querySelectorAll('a[download]').forEach(function (a) {
@@ -81,5 +82,37 @@ document.querySelectorAll('.pt-try').forEach(function (s) {
       s.querySelectorAll('.pt-try-panel').forEach(function (p) { p.hidden = p.dataset.s !== b.dataset.s; });
       msg.textContent = '';
     });
+  });
+});
+
+// Buy buttons: a click counts as /get/<page's pack>/buy-<product>. Checkout opens in the same tab, which would
+// cancel the frame, so a plain click waits for the frame to load (0.7 s at most). New-tab clicks don't wait.
+var BUY = {
+  polar_cl_19uEMlN6kE8J27Q8r57PBiUyR8C8ILlhTi5eY08MpbQ: 'teacher-pro',
+  polar_cl_PuaJ5VOVryUtrRoYynuaxNDJ5kqoSBYkLw3o93BVDIm: 'comment-bank',
+  polar_cl_P9pcPL5q1yoTYLHyFFVmtFG777JYDdqLGUISd0h5oAl: 'bookkeeper-pro',
+  polar_cl_GEpYqkQpXmLzTzuHjUzsX0fGRuM3HzlmR0poH3uRaaD: 'trades-pro',
+  polar_cl_0GwxHuqIEUJtaUKbU0xavChaqsCruOEBOTzp70pHJ7x: 'landlord-pro',
+  polar_cl_DWRX6mrjQb051G7e7lAoQMjmZD9aVtQHId7VL4dOOMI: 'landlord-kit',
+  polar_cl_GuFAPenA5N8sxyI67sftnJdFQkg3KuXwFQ2As1oeXkP: 'landlord-sheet',
+  polar_cl_g41fOfhxzIiJIH2FBiysw9SwUg6rQ1taC13c42Y5QnU: 'seller-sheet',
+  polar_cl_9iRu19qGMpF9y0ZXuEsXnergnqs6Tb1jac9gy0l9iRa: 'seller-pro',
+  polar_cl_0Pxbnxcg3LelN56xPW1mHTS7D9pUfwF9rbAAj1Y256V: 'real-estate-pro',
+  polar_cl_kBCc4yOmosne80NBVS2a772DVWXfB9iRuzNnQ2JC9M9: 'sre-solo',
+  polar_cl_xHCTZ211EsV9DJX7gPWJZelYwyzDGlRkgkzii23oPkR: 'sre-team'
+};
+document.querySelectorAll('a[href^="https://buy.polar.sh/"]').forEach(function (a) {
+  var id = a.pathname.slice(1);
+  var action = 'buy-' + (BUY[id] || id.slice(-6));
+  a.addEventListener('auxclick', function (e) { if (e.button === 1) count(action); });
+  a.addEventListener('click', function (e) {
+    if (e.ctrlKey || e.metaKey || e.shiftKey || e.altKey || a.target === '_blank') { count(action); return; }
+    var frame = count(action);
+    if (!frame) return;
+    e.preventDefault();
+    var gone = false;
+    function go() { if (!gone) { gone = true; location.href = a.href; } }
+    frame.addEventListener('load', function () { setTimeout(go, 100); });
+    setTimeout(go, 700);
   });
 });
