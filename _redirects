@@ -51,6 +51,9 @@
 /form-4a /section-13-rent-increase 301
 
 # Download counter: every /get/<pack>/<action> path serves get/index.html (see that file)
+/cis /trades-skills/guides/cis-tax-refund-calculator 301
+/cis-refund /trades-skills/guides/cis-tax-refund-calculator 301
+/cis-rebate /trades-skills/guides/cis-tax-refund-calculator 301
 /mileage /mileage-allowance-calculator 301
 /mileage-allowance /mileage-allowance-calculator 301
 /55p /mileage-allowance-calculator 301
