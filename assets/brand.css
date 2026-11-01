@@ -51,3 +51,14 @@
 .pt-note { background: rgba(0,0,0,.035); border-radius: 12px; padding: 12px 16px; font-size: .92em; }
 .pt-setup pre { white-space: pre-wrap; }
 @media (max-width: 700px) { .pt-howto.with-video { grid-template-columns: 1fr; } .pt-howto video { max-width: 300px; justify-self: center; } }
+
+/* "Try it now" section on pack pages (ops/try-section.py); behaviour in setup.js. */
+.pt-try { --pt-accent: var(--pt-orange); background: #fff; border: 1px solid rgba(0,0,0,.1); border-top: 6px solid var(--pt-accent); border-radius: 16px; padding: 16px 20px; margin: 24px 0 32px; }
+.pt-try h2 { margin-top: 4px; }
+.pt-try-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 14px; }
+.pt-try-chips button { font: inherit; font-weight: 700; font-size: 15px; padding: 8px 14px; border-radius: 999px; border: 2px solid rgba(0,0,0,.15); background: #fff; color: #1d1d1b; cursor: pointer; text-align: left; }
+.pt-try-chips button[aria-selected="true"] { background: #1d1d1b; border-color: #1d1d1b; color: #fff; }
+.pt-try label { display: block; font-weight: 700; font-size: .9em; margin-bottom: 4px; }
+.pt-try textarea { width: 100%; font: inherit; font-size: 15px; line-height: 1.45; padding: 10px 12px; border: 1px solid rgba(0,0,0,.2); border-radius: 10px; background: #fcfcfa; color: inherit; resize: vertical; }
+.pt-try-go { margin: 10px 0 4px; }
+.pt-try-msg { min-height: 1.2em; margin: 4px 0; font-weight: 600; }

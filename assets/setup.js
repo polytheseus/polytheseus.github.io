@@ -42,3 +42,44 @@ document.querySelectorAll('.pt-setup').forEach(function (s) {
       .catch(function () { msg.innerHTML = 'Couldn’t copy automatically. <a href="' + url + '">Open the instructions</a>, select all and copy.'; });
   });
 });
+
+// "Try it now" sections (ops/try-section.py): each sample's prompt = its hidden brief + the editable case.
+// The app links are real links (so phones can hand them to the app), refreshed as the case is edited.
+var TRY_APPS = { chatgpt: 'https://chatgpt.com/?q=', claude: 'https://claude.ai/new?q=' };
+document.querySelectorAll('.pt-try').forEach(function (s) {
+  var msg = s.querySelector('.pt-try-msg');
+  var chips = s.querySelectorAll('.pt-try-chips button');
+  function prompt(panel) {
+    return panel.dataset.brief + '\n\nThe job:\n' + panel.querySelector('textarea').value.trim();
+  }
+  s.querySelectorAll('.pt-try-panel').forEach(function (panel) {
+    var area = panel.querySelector('textarea');
+    function refresh() {
+      panel.querySelectorAll('a[data-app]').forEach(function (a) {
+        a.href = TRY_APPS[a.dataset.app] + encodeURIComponent(prompt(panel));
+      });
+    }
+    refresh();
+    area.addEventListener('input', refresh);
+    panel.querySelectorAll('a[data-app]').forEach(function (a) {
+      a.addEventListener('click', function () { refresh(); count('try-' + a.dataset.app + '-' + panel.dataset.s); });
+    });
+    var copy = panel.querySelector('button[data-app="copy"]');
+    copy.addEventListener('click', function () {
+      count('try-copy-' + panel.dataset.s);
+      navigator.clipboard.writeText(prompt(panel)).then(function () {
+        msg.textContent = 'Copied. Paste it into Gemini, Copilot or any AI chat app and send.';
+        copy.textContent = 'Copied ✓';
+      }).catch(function () {
+        msg.textContent = 'Couldn’t copy automatically. Select the sample job above, then use ChatGPT or Claude.';
+      });
+    });
+  });
+  chips.forEach(function (b) {
+    b.addEventListener('click', function () {
+      chips.forEach(function (x) { x.setAttribute('aria-selected', x === b); });
+      s.querySelectorAll('.pt-try-panel').forEach(function (p) { p.hidden = p.dataset.s !== b.dataset.s; });
+      msg.textContent = '';
+    });
+  });
+});
