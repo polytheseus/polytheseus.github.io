@@ -51,4 +51,7 @@
 /form-4a /section-13-rent-increase 301
 
 # Download counter: every /get/<pack>/<action> path serves get/index.html (see that file)
+/mileage /mileage-allowance-calculator 301
+/mileage-allowance /mileage-allowance-calculator 301
+/55p /mileage-allowance-calculator 301
 /get/* /get/ 200

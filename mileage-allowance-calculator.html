@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mileage allowance 2026/27: 55p a mile, 35p above 10,000 from 2027 (free calculator)</title>
+<meta name="description" content="HMRC mileage rates: 55p a mile for the first 10,000 business miles from 6 April 2026 (was 45p), 25p after, rising to 35p from April 2027. Free calculator for the self-employed and employees, with all three tax years.">
+<link rel="canonical" href="https://polytheseus.com/mileage-allowance-calculator">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Polytheseus">
+<meta property="og:title" content="Mileage allowance: 55p a mile now, 35p above 10,000 from 2027">
+<meta property="og:description" content="Which rate goes on which return, the traps (the 10,000 miles are shared), and a free calculator for 2025/26, 2026/27 and 2027/28.">
+<meta property="og:url" content="https://polytheseus.com/mileage-allowance-calculator">
+<link rel="stylesheet" href="style.css">
+<style>
+main.wrap { max-width: 860px; }
+header.wrap { max-width: 860px; padding-top: 40px; }
+h2 { font-size: 30px; margin: 56px 0 8px; }
+.answer { background: var(--cream); border: 1px solid var(--line); border-left: 5px solid var(--orange); border-radius: 12px; padding: 16px 20px; margin: 24px 0; }
+.answer p { margin: .35em 0; }
+table.t, table.lm-t { width: 100%; border-collapse: collapse; background: #fff; font-size: 16px; margin: 12px 0 20px; }
+table.t th, table.t td, table.lm-t th, table.lm-t td { border: 1px solid var(--line); padding: 7px 10px; text-align: left; vertical-align: top; }
+table.t th, table.lm-t th { background: var(--cream); }
+.n { text-align: right !important; font-variant-numeric: tabular-nums; white-space: nowrap; }
+tr.tot td { font-weight: 700; background: #faf6f0; }
+.tool { background: #fff; border: 2px solid var(--orange); border-radius: 16px; padding: 20px 22px; margin: 22px 0; }
+.tool fieldset { border: 0; padding: 0; margin: 14px 0 6px; }
+.tool legend { font-weight: 800; color: var(--ink); margin-bottom: 4px; }
+.tool label { display: block; font-weight: 600; margin: 8px 0 2px; font-size: 16px; }
+.tool label span { font-weight: 400; color: var(--muted); font-size: 14px; }
+.tool input, .tool select { font: inherit; font-size: 16px; padding: 7px 9px; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+.tool input[type=checkbox] { width: auto; margin-right: 6px; }
+.prow { display: grid; grid-template-columns: 1.4fr 1fr .9fr .7fr .7fr; gap: 8px; align-items: end; margin: 6px 0; }
+.prow input, .prow select { width: 100%; }
+.prow .h { font-size: 13px; color: var(--muted); font-weight: 600; }
+.prow label { margin: 0; font-weight: 400; }
+.prow .c { display: none; font-size: 13px; color: var(--muted); font-weight: 600; }
+.scroll { overflow-x: auto; }
+table.t th { white-space: normal; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.two input { width: 100%; }
+.check label { font-weight: 400; }
+.tool button { font: inherit; font-weight: 800; border: 0; border-radius: 999px; padding: 11px 22px; cursor: pointer; background: var(--orange); color: var(--ink); margin: 14px 8px 0 0; }
+.tool button.ghost { background: transparent; border: 2px solid var(--ink); padding: 9px 20px; }
+#lt-out { margin-top: 14px; }
+.lm-yes, .lm-no, .lm-err { border-radius: 10px; padding: 10px 14px; }
+.lm-yes { background: #fde8dc; }
+.lm-no { background: #e5f3ea; }
+.lm-err { background: #fbe3e3; }
+.lm-note { border-left: 4px solid var(--orange); padding: 2px 0 2px 12px; }
+.lm-small, .small { color: var(--muted); font-size: 15px; }
+.lm-tl li { margin-bottom: 4px; }
+pre.prompt { white-space: pre-wrap; background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; font: 15px/1.55 ui-monospace, Menlo, Consolas, monospace; }
+.cta { background: var(--cream); border: 1px solid var(--line); border-radius: 16px; padding: 22px 24px; margin: 36px 0; }
+[hidden] { display: none !important; }
+@media (max-width: 640px) {
+  .prow { grid-template-columns: 1fr 1fr; }
+  .prow .h { display: none; }
+  .prow .c { display: block; }
+  .prow:not(:first-of-type) .nm { margin-top: 10px; }
+  .prow .nm { grid-column: 1 / -1; }
+  .two { grid-template-columns: 1fr; }
+}
+.check label { display: block; font-weight: 400; margin: 4px 0; }
+.tool input[type=radio] { width: auto; margin-right: 6px; }
+#mi-rate-self, #mi-rate-emp { font-weight: 600; color: inherit; font-size: 16px; }
+</style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Mileage allowance: 55p a mile from April 2026, and 35p above 10,000 miles from April 2027", "datePublished": "2026-11-01", "dateModified": "2026-11-01", "author": {"@type": "Organization", "name": "Polytheseus", "url": "https://polytheseus.com/"}, "publisher": {"@type": "Organization", "name": "Polytheseus", "url": "https://polytheseus.com/"}, "mainEntityOfPage": "https://polytheseus.com/mileage-allowance-calculator"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Has the 45p mileage rate gone up?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. From 6 April 2026 the approved rate for the first 10,000 business miles in a car or van is 55p, up from 45p, for both the self-employed (simplified expenses) and employees (approved mileage allowance payments). Above 10,000 miles it stays at 25p until April 2027."}}, {"@type": "Question", "name": "What are the HMRC mileage rates for 2026/27?", "acceptedAnswer": {"@type": "Answer", "text": "Cars and vans 55p a mile for the first 10,000 business miles and 25p after that; motorcycles 24p; bicycles 20p (employees). Employers can also pay 5p a mile per passenger tax-free."}}, {"@type": "Question", "name": "Is the mileage rate going up to 35p in 2027?", "acceptedAnswer": {"@type": "Answer", "text": "Budget 2026 announced that the rate for business mileage above 10,000 miles rises from 25p to 35p from 6 April 2027, for employees and for the self-employed. The first 10,000 miles stay at 55p. It will be set by regulations later in the 2026 to 2027 year, so treat it as announced until then."}}, {"@type": "Question", "name": "Which mileage rate do I use on my 2025/26 tax return?", "acceptedAnswer": {"@type": "Answer", "text": "45p for the first 10,000 business miles and 25p after that. The 55p rate only applies from the 2026 to 2027 tax year. If your accounting year doesn't end on 31 March or 5 April, see the apportionment note above."}}, {"@type": "Question", "name": "Is the 10,000 miles per vehicle?", "acceptedAnswer": {"@type": "Answer", "text": "No. For the self-employed, the 10,000 miles at the higher rate are shared by all the business's cars and vans in the period. For employees, all the cars and vans used for one employment count together. Motorcycles are 24p a mile at any mileage."}}, {"@type": "Question", "name": "Can I claim mileage and fuel?", "acceptedAnswer": {"@type": "Answer", "text": "Not for the same vehicle. The mileage rate covers fuel or electricity and all other running costs. You can still claim parking, tolls, congestion charges and other travel such as train fares."}}]}]}
+</script>
+<!-- pt:head -->
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/brand.css">
+<meta property="og:image" content="https://polytheseus.com/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /pt:head -->
+</head>
+<body>
+<!-- pt:bar -->
+<nav class="pt-bar" aria-label="Polytheseus">
+  <div class="pt-bar-in">
+    <a class="pt-brand" href="/"><img src="/assets/favicon.svg" alt="" width="30" height="30"><span>POLYTHESEUS</span></a>
+    <div class="pt-nav">
+      <a href="/#packs">Packs</a>
+      <a href="/tools">Free tools</a>
+      <a class="pt-hide-sm" href="/#how">How it works</a>
+      <a class="pt-hide-sm" href="/#about">About</a>
+      <a class="pt-cta" href="/#packs">Start free</a>
+    </div>
+  </div>
+</nav>
+<!-- /pt:bar -->
+
+<header class="wrap">
+  <p class="eyebrow">For the self-employed and employees · Checked against gov.uk on 1 November 2026</p>
+  <h1>Mileage allowance: 55p a mile from April 2026, and 35p above 10,000 miles from April 2027</h1>
+  <p class="lede">The 45p rate for business miles in your own car or van went up to 55p on 6 April 2026, and Budget 2026 announced that the rate above 10,000 miles goes from 25p to 35p in April 2027. Here's which rate goes on which return, and a free calculator for your own miles.</p>
+</header>
+
+<main class="wrap">
+
+<div class="answer">
+  <p><strong>The short answer.</strong> For business miles in your own car or van you can claim <strong>55p a mile for the first 10,000 miles</strong> and <strong>25p after that</strong> in the 2026 to 2027 tax year (it was 45p and 25p up to 5 April 2026). From 6 April 2027 the rate above 10,000 miles is due to rise to <strong>35p</strong>. Motorcycles stay at 24p and bicycles (employees only) at 20p.</p>
+  <p>The same rates apply to sole traders using simplified expenses and to employees using their own car for work. The 2025 to 2026 return you file by 31 January 2027 still uses 45p.</p>
+</div>
+
+<h2>The rates, year by year</h2>
+<div class="scroll"><table class="t">
+<tr><th>Per business mile</th><th class="n">2025 to 2026</th><th class="n">2026 to 2027</th><th class="n">2027 to 2028</th></tr>
+<tr><td>Cars and vans, first 10,000 miles</td><td class="n">45p</td><td class="n"><strong>55p</strong></td><td class="n">55p</td></tr>
+<tr><td>Cars and vans, above 10,000 miles</td><td class="n">25p</td><td class="n">25p</td><td class="n"><strong>35p</strong> (announced)</td></tr>
+<tr><td>Motorcycles</td><td class="n">24p</td><td class="n">24p</td><td class="n">24p</td></tr>
+<tr><td>Bicycles (employees only)</td><td class="n">20p</td><td class="n">20p</td><td class="n">20p</td></tr>
+<tr><td>Passenger, per passenger (employees, if the employer pays it)</td><td class="n">5p</td><td class="n">5p</td><td class="n">5p</td></tr>
+</table></div>
+<p class="small">55p is in law (ITTOIA 2005 s94F, changed by the Taxation (Energy and Vehicles) Act 2026). 35p was announced at Budget 2026 on 28 October 2026 and will be set by regulations before April 2027. Sources: <a href="https://www.gov.uk/simpler-income-tax-simplified-expenses/vehicles-">gov.uk simplified expenses: vehicles</a>, <a href="https://www.gov.uk/expenses-and-benefits-business-travel-mileage/rules-for-tax">business travel mileage for employees</a>, <a href="https://www.gov.uk/government/publications/budget-2026-overview-of-tax-legislation-and-rates-ootlar/budget-2026-overview-of-tax-legislation-and-rates-ootlar">Budget 2026 OOTLAR 2.7</a>.</p>
+
+<h2 id="calculator">Free mileage calculator: 2025/26, 2026/27 and 2027/28</h2>
+<p>Type your business miles for a normal year. It works out all three years side by side. Nothing you type is sent or saved.</p>
+<form class="tool" id="mi-form" autocomplete="off">
+  <fieldset>
+    <legend>I'm</legend>
+    <p class="check"><label><input type="radio" name="mi-who" value="self" checked> self-employed (sole trader or partner): simplified expenses</label>
+    <label><input type="radio" name="mi-who" value="employee"> an employee using my own vehicle for work</label></p>
+  </fieldset>
+  <div class="two">
+    <div><label for="mi-car">Car or van business miles <span>all your cars and vans together</span></label><input id="mi-car" inputmode="decimal" placeholder="e.g. 16000"></div>
+    <div><label for="mi-per">Miles are per</label><select id="mi-per"><option value="year">year</option><option value="month">month</option></select></div>
+  </div>
+  <div class="two">
+    <div><label for="mi-moto">Motorcycle business miles <span>optional</span></label><input id="mi-moto" inputmode="decimal" placeholder="0"></div>
+    <div class="mi-emp" hidden><label for="mi-bike">Bicycle business miles <span>optional</span></label><input id="mi-bike" inputmode="decimal" placeholder="0"></div>
+  </div>
+  <div class="mi-emp" hidden><label for="mi-paid">What your employer paid you for these miles in the year <span>£ total, 0 if nothing</span></label><input id="mi-paid" inputmode="decimal" placeholder="e.g. 2700"></div>
+  <label for="mi-rate"><span id="mi-rate-self">Your top rate of Income Tax on your profit</span><span id="mi-rate-emp" hidden>Your top rate of Income Tax</span></label>
+  <select id="mi-rate"><option value="0">None (income under £12,570)</option><option value="0.2" selected>Basic rate 20%</option><option value="0.4">Higher rate 40%</option><option value="0.45">Additional rate 45%</option></select>
+  <br><button type="submit">Work it out</button><button type="button" class="ghost" id="mi-example">Try an example</button>
+  <div id="mi-out" aria-live="polite"></div>
+</form>
+<script src="/assets/mileage.js"></script>
+
+<h2>Five worked examples</h2>
+<p>Same miles each year. Each one is in the calculator's tests.</p>
+<div class="scroll"><table class="t">
+<tr><th>Who</th><th class="n">2025/26</th><th class="n">2026/27</th><th class="n">2027/28</th></tr>
+<tr><td><strong>Dan</strong>, electrician, 16,000 van miles, simplified expenses</td><td class="n">£6,000</td><td class="n">£7,000</td><td class="n">£7,600</td></tr>
+<tr><td><strong>Mia</strong>, mobile hairdresser, 8,000 car miles</td><td class="n">£3,600</td><td class="n">£4,400</td><td class="n">£4,400</td></tr>
+<tr><td><strong>Leo</strong>, courier, 3,000 motorcycle miles</td><td class="n">£720</td><td class="n">£720</td><td class="n">£720</td></tr>
+<tr><td><strong>Sam</strong>, care worker (employee), 6,000 miles, employer pays 45p: relief to claim</td><td class="n">£0</td><td class="n">£600</td><td class="n">£600</td></tr>
+<tr><td><strong>Ruth</strong>, sales rep (employee), 14,000 miles, employer pays nothing: relief to claim</td><td class="n">£5,500</td><td class="n">£6,500</td><td class="n">£6,900</td></tr>
+</table></div>
+<p>Dan's van claim goes up £1,000 this year and another £600 in 2027 to 2028. At the basic rate that's about £260 and then £156 less tax and National Insurance, as long as he keeps a log that backs up the miles. Sam and Ruth get tax back on the figure shown (20% of £600 is £120), not the figure itself.</p>
+
+<h2>Which rate goes on which return</h2>
+<ul>
+  <li><strong>2025 to 2026 return</strong> (due online by 31 January 2027): 45p and 25p.</li>
+  <li><strong>2026 to 2027 return</strong> (due by 31 January 2028): 55p and 25p.</li>
+  <li><strong>2027 to 2028</strong>: 55p and 35p, if the regulations go through as announced.</li>
+  <li><strong>Accounts that don't end on 31 March or 5 April:</strong> HMRC's manual says to work out the period's vehicle expenses with the rates for the tax year you're taxing, then apportion the profit as usual. So a year to 31 December 2026 is worked out at 45p for the part that falls into 2025 to 2026 and at 55p for the part in 2026 to 2027 (<a href="https://www.gov.uk/hmrc-internal-manuals/business-income-manual/bim75005">BIM75005</a>, with examples).</li>
+</ul>
+
+<h2>Things that catch people out</h2>
+<ul>
+  <li><strong>The 10,000 miles are shared.</strong> If your business runs two vans, the higher rate covers 10,000 miles across both, not 10,000 each (ITTOIA s94F(3)). For employees, all the cars and vans you use for one job count together.</li>
+  <li><strong>Once you pick the mileage rate for a vehicle, you keep it</strong> as long as that vehicle is in the business. If you've ever claimed capital allowances on it, or deducted its cost under the cash basis (vans and motorcycles), you can't switch to the mileage rate for it.</li>
+  <li><strong>It covers everything about running the vehicle:</strong> fuel or charging, insurance, repairs, servicing, road tax, MOT and depreciation. Don't claim any of those as well. Parking, tolls and congestion charges on business trips go on top.</li>
+  <li><strong>Commuting isn't business.</strong> Travel between home and a regular base (your shop, unit or office) doesn't count. Trips to customers' sites, suppliers and the merchant do. Trades who work from home and go out to different jobs can usually claim the drive to each job; HMRC's <a href="https://www.gov.uk/hmrc-internal-manuals/business-income-manual/bim37600">Business Income Manual (BIM37600 onwards)</a> goes through the cases.</li>
+  <li><strong>Electric and hybrid cars</strong> get the same rates. The mileage rate doesn't care what fuel you use, which makes it generous for a cheap-to-run car.</li>
+  <li><strong>Limited companies can't use simplified expenses.</strong> A director using their own car is an employee for this: the company can pay up to the approved amount tax-free.</li>
+</ul>
+
+<h2>Mileage rate or actual costs?</h2>
+<p>Simplified expenses suit most people with an ordinary car or a van that's mainly for work and modest running costs: one number, a log, done. Actual costs (the business share of all the running costs, plus capital allowances on the vehicle) can come out higher when you've bought an expensive van outright, when the vehicle is used almost only for business, or when running costs are high. Because the choice sticks for the life of the vehicle, compare both before your first claim. HMRC's <a href="https://www.gov.uk/simplified-expenses-checker">simplified expenses checker</a> does the comparison, and a bookkeeper or accountant can too.</p>
+
+<h2>For employees: claiming Mileage Allowance Relief</h2>
+<p>If your employer pays you less than the approved amount (or nothing), you can claim tax relief on the difference. Many employers still paid 45p after April 2026: that leaves 10p a mile on your first 10,000 miles to claim.</p>
+<ul>
+  <li>Keep a log: the date, where from and to, why, and the miles, for every work journey. HMRC asks for copies when you claim.</li>
+  <li>Claim online on gov.uk, or by post, for the current tax year and the 4 before it. If you file a Self Assessment return, claim on the return instead.</li>
+  <li>You get tax back at your rate (20% of the relief for a basic-rate taxpayer), and it can't be more than the tax you paid that year.</li>
+  <li>If your employer pays more than the approved amount, the extra is taxable and should go through payroll or on a P11D.</li>
+</ul>
+<p class="small">Source: <a href="https://www.gov.uk/tax-relief-for-employees/vehicles-you-use-for-work">gov.uk tax relief for vehicles you use for work</a>.</p>
+
+<h2>Keep a log that stands up</h2>
+<p>The claim is only as good as the record behind it. For each business journey note the date, the start and end points, the reason (the customer or job) and the miles. Keep the odometer reading at the start and end of each tax year too. A notes app or a spreadsheet is fine; you don't need special software.</p>
+
+<div class="cta">
+  <h2 style="margin-top:0">Free help with the paperwork around it</h2>
+  <p><strong>Trades:</strong> <a href="/trades-skills/">Trades Skills</a> makes ChatGPT, Gemini or Claude write your quotes, invoices and payment chasers the way an experienced tradesperson would. Free to start.</p>
+  <p><strong>Bookkeepers:</strong> <a href="/bookkeeper-skills/">Bookkeeper Skills</a> includes a client-explainer that turns this change into a plain-English note for each client, with their own miles, and a records-chaser for the missing mileage log.</p>
+  <p>More free calculators at <a href="/tools">polytheseus.com/tools</a>.</p>
+</div>
+
+<h2>FAQ</h2>
+<h3>Has the 45p mileage rate gone up?</h3>
+<p>Yes. From 6 April 2026 the approved rate for the first 10,000 business miles in a car or van is 55p, up from 45p, for both the self-employed (simplified expenses) and employees (approved mileage allowance payments). Above 10,000 miles it stays at 25p until April 2027.</p>
+<h3>What are the HMRC mileage rates for 2026/27?</h3>
+<p>Cars and vans 55p a mile for the first 10,000 business miles and 25p after that; motorcycles 24p; bicycles 20p (employees). Employers can also pay 5p a mile per passenger tax-free.</p>
+<h3>Is the mileage rate going up to 35p in 2027?</h3>
+<p>Budget 2026 announced that the rate for business mileage above 10,000 miles rises from 25p to 35p from 6 April 2027, for employees and for the self-employed. The first 10,000 miles stay at 55p. It will be set by regulations later in the 2026 to 2027 year, so treat it as announced until then.</p>
+<h3>Which mileage rate do I use on my 2025/26 tax return?</h3>
+<p>45p for the first 10,000 business miles and 25p after that. The 55p rate only applies from the 2026 to 2027 tax year. If your accounting year doesn't end on 31 March or 5 April, see the apportionment note above.</p>
+<h3>Is the 10,000 miles per vehicle?</h3>
+<p>No. For the self-employed, the 10,000 miles at the higher rate are shared by all the business's cars and vans in the period. For employees, all the cars and vans used for one employment count together. Motorcycles are 24p a mile at any mileage.</p>
+<h3>Can I claim mileage and fuel?</h3>
+<p>Not for the same vehicle. The mileage rate covers fuel or electricity and all other running costs. You can still claim parking, tolls, congestion charges and other travel such as train fares.</p>
+
+<h2>Sources</h2>
+<ul class="small">
+  <li><a href="https://www.gov.uk/simpler-income-tax-simplified-expenses/vehicles-">Simplified expenses if you're self-employed: vehicles</a> (gov.uk): 55p from 2026 to 2027, 45p before</li>
+  <li><a href="https://www.legislation.gov.uk/ukpga/2005/5/section/94F">ITTOIA 2005 s94F</a>: the rates and the shared 10,000 miles</li>
+  <li><a href="https://www.gov.uk/hmrc-internal-manuals/business-income-manual/bim75005">BIM75005</a> (HMRC): who can use it, what it covers, periods that straddle two tax years</li>
+  <li><a href="https://www.gov.uk/expenses-and-benefits-business-travel-mileage/rules-for-tax">Expenses and benefits: business travel mileage for employees' own vehicles</a> and <a href="https://www.gov.uk/guidance/mileage-allowance-payments-480-appendix-3">480 Appendix 3</a> (HMRC)</li>
+  <li><a href="https://www.gov.uk/tax-relief-for-employees/vehicles-you-use-for-work">Tax relief for employees: vehicles you use for work</a> (gov.uk)</li>
+  <li><a href="https://www.gov.uk/government/publications/budget-2026-overview-of-tax-legislation-and-rates-ootlar/budget-2026-overview-of-tax-legislation-and-rates-ootlar">Budget 2026: Overview of tax legislation and rates</a>, 2.7 AMAPs and simplified mileage rates (28 October 2026)</li>
+</ul>
+
+<p class="small">This page explains HMRC's published rules in plain English. The calculator gives estimates and general information, not tax advice: the 2027 to 2028 rate is announced but not yet set, and your circumstances may differ. Check gov.uk or a qualified accountant. Last checked against gov.uk on 1 November 2026.</p>
+
+</main>
+<!-- pt:foot -->
+<footer class="pt-foot">
+  <div class="pt-foot-in">
+    <div>
+      <a class="pt-brand" href="/"><img src="/assets/favicon.svg" alt="" width="30" height="30"><span>POLYTHESEUS</span></a>
+      <p>Know-how packs that make ChatGPT, Gemini and Claude work like an experienced pro in your job. Free to start.</p>
+      <p><a href="mailto:support@polytheseus.com">support@polytheseus.com</a></p>
+    </div>
+    <div>
+      <h4>Packs</h4>
+      <ul><li><a href="/teacher-skills/">Teachers</a></li><li><a href="/trades-skills/">Trades</a></li><li><a href="/bookkeeper-skills/">Bookkeepers</a></li><li><a href="/real-estate-skills/">Real estate agents</a></li><li><a href="/seller-skills/">Online sellers</a></li><li><a href="/landlord-skills/">Landlords</a></li><li><a href="/sre-skills/">SRE &amp; DevOps</a></li></ul>
+    </div>
+    <div>
+      <h4>Polytheseus</h4>
+      <ul>
+        <li><a href="/tools">Free tools</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/privacy">Privacy</a></li>
+        <li><a href="/terms">Terms</a></li>
+        <li><a href="https://github.com/polytheseus">GitHub</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Watch</h4>
+      <ul><li><a href="https://www.youtube.com/@polytheseus" rel="me noopener">YouTube</a></li><li><a href="https://www.tiktok.com/@polytheseus" rel="me noopener">TikTok</a></li><li><a href="https://www.facebook.com/profile.php?id=1374246585776738" rel="me noopener">Facebook</a></li></ul>
+    </div>
+  </div>
+  <div class="pt-foot-base">Polytheseus is run by Robin Hale. The packs and this site are written and tested by Claude, an AI agent. <a href="/#about">How that works</a>.</div>
+</footer>
+<!-- /pt:foot -->
+</body>
+</html>
