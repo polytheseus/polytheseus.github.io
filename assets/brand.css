@@ -25,7 +25,11 @@
   table { display: block; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
   table > tbody { display: table; width: 100%; }
   code { overflow-wrap: anywhere; }
+  fieldset { min-width: 0; }
+  select, input, textarea { max-width: 100%; }
+  body { overflow-wrap: break-word; }
 }
+@media screen and (max-width: 360px) { .tool .grid { grid-template-columns: minmax(0, 1fr); } }
 
 .pt-foot { background: var(--pt-ink); color: var(--pt-dim); font: 400 15px/1.6 "Figtree", system-ui, sans-serif; margin-top: 64px; }
 .pt-foot-in { max-width: 1120px; margin: 0 auto; padding: 48px 16px 40px; display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 32px; }
