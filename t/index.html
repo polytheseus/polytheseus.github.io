@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>polytheseus</title>
+</head>
+<body>
+<!-- Typed addresses from TikTok. Captions and slides there say polytheseus.com/t/<short>, because links aren't
+     clickable. This page counts the visit as /get/tiktok/<short> (see get/index.html: no cookies, nothing
+     personal) and forwards to the normal /<short> address. _redirects serves every /t/* path from this file. -->
+<p><a id="go" href="/">Continue to polytheseus.com</a></p>
+<script>
+(function () {
+  var m = location.pathname.match(/^\/t\/([a-z0-9-]+)\/?$/);
+  var short = m ? m[1] : '';
+  var dest = short ? '/' + short : '/';
+  document.getElementById('go').href = dest;
+  var left = false;
+  function go() { if (!left) { left = true; location.replace(dest); } }
+  if (short) {
+    var f = document.createElement('iframe');
+    f.src = '/get/tiktok/' + short;
+    f.hidden = true;
+    f.onload = function () { setTimeout(go, 150); };
+    document.body.appendChild(f);
+    setTimeout(go, 1200);
+  } else { go(); }
+})();
+</script>
+</body>
+</html>

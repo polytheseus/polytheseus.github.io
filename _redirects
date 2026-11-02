@@ -54,6 +54,9 @@
 /section-13 /section-13-rent-increase 301
 /form-4a /section-13-rent-increase 301
 
+# TikTok-only typed addresses: count, then forward to /<short> (see t/index.html)
+/t/* /t/ 200
+
 # Download counter: every /get/<pack>/<action> path serves get/index.html (see that file)
 /cis /trades-skills/guides/cis-tax-refund-calculator 301
 /cis-refund /trades-skills/guides/cis-tax-refund-calculator 301
