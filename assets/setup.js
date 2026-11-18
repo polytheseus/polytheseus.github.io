@@ -97,6 +97,7 @@ var BUY = {
   polar_cl_GuFAPenA5N8sxyI67sftnJdFQkg3KuXwFQ2As1oeXkP: 'landlord-sheet',
   polar_cl_g41fOfhxzIiJIH2FBiysw9SwUg6rQ1taC13c42Y5QnU: 'seller-sheet',
   polar_cl_9iRu19qGMpF9y0ZXuEsXnergnqs6Tb1jac9gy0l9iRa: 'seller-pro',
+  polar_cl_h8kNjlARaHlLsu0sOMwqKETk0Npyewv62jvjC2FHBy6: 'seller-kit',
   polar_cl_0Pxbnxcg3LelN56xPW1mHTS7D9pUfwF9rbAAj1Y256V: 'real-estate-pro',
   polar_cl_kBCc4yOmosne80NBVS2a772DVWXfB9iRuzNnQ2JC9M9: 'sre-solo',
   polar_cl_xHCTZ211EsV9DJX7gPWJZelYwyzDGlRkgkzii23oPkR: 'sre-team'
