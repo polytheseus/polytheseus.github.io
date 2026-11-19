@@ -100,7 +100,8 @@ var BUY = {
   polar_cl_h8kNjlARaHlLsu0sOMwqKETk0Npyewv62jvjC2FHBy6: 'seller-kit',
   polar_cl_0Pxbnxcg3LelN56xPW1mHTS7D9pUfwF9rbAAj1Y256V: 'real-estate-pro',
   polar_cl_kBCc4yOmosne80NBVS2a772DVWXfB9iRuzNnQ2JC9M9: 'sre-solo',
-  polar_cl_xHCTZ211EsV9DJX7gPWJZelYwyzDGlRkgkzii23oPkR: 'sre-team'
+  polar_cl_xHCTZ211EsV9DJX7gPWJZelYwyzDGlRkgkzii23oPkR: 'sre-team',
+  polar_cl_xxWi1027GpCes7s38RqEevJZ7rZ9KrfzAyR4M0cfzmF: 'cis-kit'
 };
 document.querySelectorAll('a[href^="https://buy.polar.sh/"]').forEach(function (a) {
   var id = a.pathname.slice(1);
